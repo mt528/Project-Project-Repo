@@ -1,29 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Language_Learning_Project
 {
-    class Program
+    public static class IntroCode
     {
-        static void Main(string[] args)
+        public static void Intro()
         {
-            IntroCode.Intro(); // Looks like its working 
-            
-            
-            /*
             //------------------------------------------------------------------------------------
-            string userInputIntro = "Nothing" ; // To store the user's input for the introduction
-            //The introduction
+            string userInputIntro = "Nothing"; // To store the user's input for the introduction
+                                               //The introduction
             Console.WriteLine("Hello!");
             Console.WriteLine("Welcome to our game!");
             Console.WriteLine("The game's goal is help you learn a language!");
 
-            
+
 
             while (userInputIntro == "Nothing") // While loop
             {
                 Console.WriteLine("\nAre you ready to begin? (Y/N)");
                 userInputIntro = Console.ReadLine().ToUpper(); // Takes the input - stores it in a variable - changes it to upper case
-               
+
                 userInputIntro = userInputIntro.Substring(0, 1); // Takes the string variable and overwrites it with the first letter typed
                 // This is done to make sure it still works incase people enter "yes" or "no"
 
@@ -35,9 +33,9 @@ namespace Language_Learning_Project
 
                     case "N":
                         string noCaseVar = "Nothing"; // New variable for this scenario
-                        
+
                         while (noCaseVar == "Nothing") // loop to make no input errors break the programme
-                        { 
+                        {
                             Console.WriteLine("Would you like to quit (Y/N)?");
                             noCaseVar = Console.ReadLine().ToUpper(); // Takes the input and store it in a new variable
 
@@ -75,14 +73,13 @@ namespace Language_Learning_Project
                         userInputIntro = "Nothing"; // Reseting the input so the loop still works
 
                         break;
+
                 }
+
             }
+                 
+        } 
 
-
-            //------------------------------------------------------------------------------------
-
-            
-            */
-        }
     }
+
 }
