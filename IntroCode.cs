@@ -25,7 +25,7 @@ namespace Language_Learning_Project
                 userInputIntro = userInputIntro.Substring(0, 1); // Takes the string variable and overwrites it with the first letter typed
                 // This is done to make sure it still works incase people enter "yes" or "no"
 
-                switch (userInputIntro) // Selection to decidce where to programme needs to go based on user
+                switch (userInputIntro) // Selection to decidce where to programme needs to go based on user input
                 {
                     case "Y":
 
