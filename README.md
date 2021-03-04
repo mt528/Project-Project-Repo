@@ -7,3 +7,6 @@ The comments have been updated to be a little more clearer and a test plan is fi
 
 I have finished making the main menu code. It just needs testing to make sure it works formally (i mean it needs to be tested through a proper test plan). The test plan needs to be created still.
 This also needs to be tested that it works with the previous function properly as well. - Matt 01/03/2021
+
+I have made most of the Hiragana function that splits off into 5 lessons. Still working on the lessons and how the main loop within the tests of those lessons will work. I have a design
+but getting it to work within code is currently my issue. - Matt 04/03/2021

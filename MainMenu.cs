@@ -37,13 +37,14 @@ namespace Language_Learning_Project
                             Console.WriteLine("· Hiragana - (Hir)"); // Hir for hiragana
                             Console.WriteLine("· Coming soon! - Katakana - (Kat)"); // Kat for katakan
                             Console.WriteLine("· Coming soon! - Kanji - (Kan)"); // Kan for kanji
+                            Console.WriteLine("· Quit - (Quit)"); // To quit
                             userInput = Console.ReadLine().ToUpper();
 
                             if (userInput == "HIR")
                             {
                                 // Console.WriteLine("Test 1 - works"); // Used for testing
-                                // NEED A FUNCTION FOR HIRAGANA
-                              // MAY NOT NEED THIS!  errorControl = 0; // To break out of the loop when the function is finished
+                                JapaneseHiragana.Menu(); // Run the hiragana menu function
+                                // MAY NOT NEED THIS!  errorControl = 0; // To break out of the loop when the function is finished
                             }
 
                             else if (userInput == "KAT")
@@ -58,10 +59,16 @@ namespace Language_Learning_Project
                                 Console.WriteLine("Unfortunetly Kanji is not finished yet!");
                             }
 
+                            else if (userInput == "QUIT")
+                            {
+                                Console.WriteLine("Bye Bye!");
+                                Environment.Exit(0); // To end the programme
+                            }
+
                             else // Error control
                             {
                                 Console.WriteLine("Looks like something has gone wrong");
-                                Console.WriteLine("Remember, its either Hir,Kat or Kan for what is needed to be typed!");
+                                Console.WriteLine("Remember, its either Hir,Kat, Kan or Quit for what is needed to be typed!");
                             }
                         }
                        

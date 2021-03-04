@@ -6,9 +6,11 @@ namespace Language_Learning_Project
     {
         static void Main(string[] args)
         {
-           // IntroCode.Intro(); // Looks like its working 
+            // IntroCode.Intro(); // Looks like its working 
 
-            MainMenu.MainMenuFunction(); // Runs the MainMenuFunction within the MainMenu Class 
+           // MainMenu.MainMenuFunction(); // Runs the MainMenuFunction within the MainMenu Class 
+
+            JapaneseHiragana.Menu(); // FOR TESTING
             
         }
     }
