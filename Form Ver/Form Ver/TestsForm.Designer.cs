@@ -36,8 +36,10 @@ namespace Form_Ver
             this.TestDoneButton = new System.Windows.Forms.Button();
             this.TestDoneLabel = new System.Windows.Forms.Label();
             this.AnswerBox = new System.Windows.Forms.TextBox();
+            this.SpeedTestWrongAnswerLabel = new System.Windows.Forms.Label();
             this.QuestionLabel = new System.Windows.Forms.Label();
             this.CheckButton = new System.Windows.Forms.Button();
+            this.SpeedTestCorrectAnswerLabel = new System.Windows.Forms.Label();
             this.IntroLabel = new System.Windows.Forms.Label();
             this.ReadyButton = new System.Windows.Forms.Button();
             this.SpeedTestIntroPanel.SuspendLayout();
@@ -72,13 +74,16 @@ namespace Form_Ver
             // 
             this.SpeedTestPanel.Controls.Add(this.TestDonePanel);
             this.SpeedTestPanel.Controls.Add(this.AnswerBox);
+            this.SpeedTestPanel.Controls.Add(this.SpeedTestWrongAnswerLabel);
             this.SpeedTestPanel.Controls.Add(this.QuestionLabel);
             this.SpeedTestPanel.Controls.Add(this.CheckButton);
+            this.SpeedTestPanel.Controls.Add(this.SpeedTestCorrectAnswerLabel);
             this.SpeedTestPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SpeedTestPanel.Location = new System.Drawing.Point(0, 0);
             this.SpeedTestPanel.Name = "SpeedTestPanel";
             this.SpeedTestPanel.Size = new System.Drawing.Size(800, 450);
             this.SpeedTestPanel.TabIndex = 2;
+            this.SpeedTestPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SpeedTestPanel_Paint);
             // 
             // TestDonePanel
             // 
@@ -122,6 +127,17 @@ namespace Form_Ver
             this.AnswerBox.TextChanged += new System.EventHandler(this.AnswerBox_TextChanged);
             this.AnswerBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnswerBox_KeyDown);
             // 
+            // SpeedTestWrongAnswerLabel
+            // 
+            this.SpeedTestWrongAnswerLabel.AutoSize = true;
+            this.SpeedTestWrongAnswerLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SpeedTestWrongAnswerLabel.Location = new System.Drawing.Point(17, 94);
+            this.SpeedTestWrongAnswerLabel.Name = "SpeedTestWrongAnswerLabel";
+            this.SpeedTestWrongAnswerLabel.Size = new System.Drawing.Size(205, 32);
+            this.SpeedTestWrongAnswerLabel.TabIndex = 5;
+            this.SpeedTestWrongAnswerLabel.Text = "Answers Wrong: 0";
+            this.SpeedTestWrongAnswerLabel.Click += new System.EventHandler(this.SpeedTestWrongAnswerLabel_Click);
+            // 
             // QuestionLabel
             // 
             this.QuestionLabel.AutoSize = true;
@@ -142,6 +158,17 @@ namespace Form_Ver
             this.CheckButton.Text = "Check";
             this.CheckButton.UseVisualStyleBackColor = true;
             this.CheckButton.Click += new System.EventHandler(this.CheckButton_Click);
+            // 
+            // SpeedTestCorrectAnswerLabel
+            // 
+            this.SpeedTestCorrectAnswerLabel.AutoSize = true;
+            this.SpeedTestCorrectAnswerLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SpeedTestCorrectAnswerLabel.Location = new System.Drawing.Point(17, 53);
+            this.SpeedTestCorrectAnswerLabel.Name = "SpeedTestCorrectAnswerLabel";
+            this.SpeedTestCorrectAnswerLabel.Size = new System.Drawing.Size(210, 32);
+            this.SpeedTestCorrectAnswerLabel.TabIndex = 4;
+            this.SpeedTestCorrectAnswerLabel.Text = "Answers Correct: 0";
+            this.SpeedTestCorrectAnswerLabel.Click += new System.EventHandler(this.SpeedTestCorrectAnswerLabel_Click);
             // 
             // IntroLabel
             // 
@@ -197,5 +224,7 @@ namespace Form_Ver
         private System.Windows.Forms.Panel TestDonePanel;
         private System.Windows.Forms.Button TestDoneButton;
         private System.Windows.Forms.Label TestDoneLabel;
+        private System.Windows.Forms.Label SpeedTestWrongAnswerLabel;
+        private System.Windows.Forms.Label SpeedTestCorrectAnswerLabel;
     }
 }

@@ -41,6 +41,12 @@ namespace Form_Ver
         public static bool TestDone = false;
 
         //-------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------
+        /// To store the number of correct/wrong answers given during the test
+        public static int CorrectAnswerCount = 0;
+        public static int WrongAnswerCount = 0;
+
+        //-------------------------------------------------------------------------------------
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

@@ -68,6 +68,10 @@ namespace Form_Ver
         #endregion
 
         #region Main Panel
+        private void SpeedTestPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         private void QuestionLabel_Click(object sender, EventArgs e)
         {
             
@@ -82,6 +86,8 @@ namespace Form_Ver
         
         {
             bool AnswerStatus = CheckAnswer(AnswerBox.Text.ToString()); // To store if the answer is correct
+
+            AnswerCorrectWrongCount(AnswerStatus); // Method to update the correct/wrong counters
 
             AnswerBox.Text = ""; // Empty the text box
 
@@ -123,6 +129,7 @@ namespace Form_Ver
             
 
         }
+
         #region Enter Key code - Text Box
         /// <summary>
         /// This will run the enter key is pressed in the text box
@@ -139,6 +146,20 @@ namespace Form_Ver
             
         }
         #endregion
+
+        #region Correct/Wrong Answer Count - Labels
+        private void SpeedTestCorrectAnswerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SpeedTestWrongAnswerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
         #endregion
 
         #region Test Done Panel Objects
@@ -150,6 +171,9 @@ namespace Form_Ver
         private void TestDoneButton_Click(object sender, EventArgs e)
         {
             HiraganaMenu Menu = new HiraganaMenu();
+
+            AnswerCountReset(); // This will reset the variables that store the answer 
+            
 
             this.Hide();
             Menu.Show();
@@ -166,6 +190,9 @@ namespace Form_Ver
         private void TestsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             HiraganaMenu Menu = new HiraganaMenu();
+
+            AnswerCountReset(); // Resets the answer count vars
+
             this.Hide();
             Menu.Show();
         }
@@ -332,10 +359,48 @@ namespace Form_Ver
         }
 
 
+
+        #endregion
+
+        #region Correct/Wrong Answer Count Method
+        /// <summary>
+        /// This is run evertime an answer has been inputted
+        /// This will either incrament the correct answer count or the wrong answer count
+        /// </summary>
+        /// <param name="AnswerState"></param>
+         void AnswerCorrectWrongCount(bool AnswerState) // Works
+        {
+            if (AnswerState == true) // Correct Answer
+            {
+                Program.CorrectAnswerCount = Program.CorrectAnswerCount + 1; // Adding one to the variable that store the answers count
+                SpeedTestCorrectAnswerLabel.Text = "Answers Correct: " + Program.CorrectAnswerCount.ToString(); // Setting that var value into the text box and writting it to a string
+            }
+
+            else if (AnswerState == false) // Incorrect Answer
+            {
+                Program.WrongAnswerCount = Program.WrongAnswerCount + 1;
+                SpeedTestWrongAnswerLabel.Text = "Answers Wrong: " + Program.WrongAnswerCount.ToString();
+            }
+        }
+
+        /// <summary>
+        /// This will be run when the user click out of the test page via the x or click the button that is shown when
+        /// the test is complete
+        /// 
+        /// This will reset the variables containing the count of how many wrong or correct answers have been given 
+        /// during the test. Reseting it means the user can do multiply tests without causing any issues
+        /// </summary>
+        void AnswerCountReset()
+        {
+            Program.CorrectAnswerCount = 0;
+            Program.WrongAnswerCount = 0;
+        }
         #endregion
 
         #endregion
 
-        
+
+
+
     }
 }

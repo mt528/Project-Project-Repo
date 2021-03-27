@@ -5,3 +5,6 @@ I have uploaded the Form version of the programme. This is a work in progress as
 forms. I have also tried to clean the console code away from this branch and only include the form code. - Matt 26/03/2021
 
 Some slight additions have been made, bug fixes and some quality of life changes. - Matt 27/03/2021
+
+Added a counter that will show the user how many correct and incorrect answers the user has inputted 
+during the test. - Matt 27/03/21
