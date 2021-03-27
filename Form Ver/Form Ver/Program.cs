@@ -29,6 +29,17 @@ namespace Form_Ver
         public static List<string> Questions = new List<string>();
         public static List<string> Answers = new List<string>();
 
+        
+        /// For the second iteration of the tests
+        public static List<string> QuestionsSecondIteration = new List<string>();
+        public static List<string> AnswerSecondIteration = new List<string>();
+
+        //-------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------
+        /// To help with a if statement 
+        /// This will be set to true when the test is done
+        public static bool TestDone = false;
+
         //-------------------------------------------------------------------------------------
         /// <summary>
         ///  The main entry point for the application.

@@ -32,13 +32,17 @@ namespace Form_Ver
             this.PanelLoadErrorLabel = new System.Windows.Forms.Label();
             this.SpeedTestIntroPanel = new System.Windows.Forms.Panel();
             this.SpeedTestPanel = new System.Windows.Forms.Panel();
+            this.TestDonePanel = new System.Windows.Forms.Panel();
+            this.TestDoneButton = new System.Windows.Forms.Button();
+            this.TestDoneLabel = new System.Windows.Forms.Label();
+            this.AnswerBox = new System.Windows.Forms.TextBox();
+            this.QuestionLabel = new System.Windows.Forms.Label();
+            this.CheckButton = new System.Windows.Forms.Button();
             this.IntroLabel = new System.Windows.Forms.Label();
             this.ReadyButton = new System.Windows.Forms.Button();
-            this.CheckButton = new System.Windows.Forms.Button();
-            this.QuestionLabel = new System.Windows.Forms.Label();
-            this.AnswerBox = new System.Windows.Forms.TextBox();
             this.SpeedTestIntroPanel.SuspendLayout();
             this.SpeedTestPanel.SuspendLayout();
+            this.TestDonePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelLoadErrorLabel
@@ -66,6 +70,7 @@ namespace Form_Ver
             // 
             // SpeedTestPanel
             // 
+            this.SpeedTestPanel.Controls.Add(this.TestDonePanel);
             this.SpeedTestPanel.Controls.Add(this.AnswerBox);
             this.SpeedTestPanel.Controls.Add(this.QuestionLabel);
             this.SpeedTestPanel.Controls.Add(this.CheckButton);
@@ -74,6 +79,69 @@ namespace Form_Ver
             this.SpeedTestPanel.Name = "SpeedTestPanel";
             this.SpeedTestPanel.Size = new System.Drawing.Size(800, 450);
             this.SpeedTestPanel.TabIndex = 2;
+            // 
+            // TestDonePanel
+            // 
+            this.TestDonePanel.Controls.Add(this.TestDoneButton);
+            this.TestDonePanel.Controls.Add(this.TestDoneLabel);
+            this.TestDonePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TestDonePanel.Location = new System.Drawing.Point(0, 0);
+            this.TestDonePanel.Name = "TestDonePanel";
+            this.TestDonePanel.Size = new System.Drawing.Size(800, 450);
+            this.TestDonePanel.TabIndex = 3;
+            // 
+            // TestDoneButton
+            // 
+            this.TestDoneButton.Location = new System.Drawing.Point(324, 351);
+            this.TestDoneButton.Name = "TestDoneButton";
+            this.TestDoneButton.Size = new System.Drawing.Size(127, 49);
+            this.TestDoneButton.TabIndex = 1;
+            this.TestDoneButton.Text = "Go back";
+            this.TestDoneButton.UseVisualStyleBackColor = true;
+            this.TestDoneButton.Click += new System.EventHandler(this.TestDoneButton_Click);
+            // 
+            // TestDoneLabel
+            // 
+            this.TestDoneLabel.AutoSize = true;
+            this.TestDoneLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestDoneLabel.Location = new System.Drawing.Point(251, 158);
+            this.TestDoneLabel.Name = "TestDoneLabel";
+            this.TestDoneLabel.Size = new System.Drawing.Size(298, 64);
+            this.TestDoneLabel.TabIndex = 0;
+            this.TestDoneLabel.Text = "Well done!\r\nYou have finished the test!";
+            this.TestDoneLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TestDoneLabel.Click += new System.EventHandler(this.TestDoneLabel_Click);
+            // 
+            // AnswerBox
+            // 
+            this.AnswerBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AnswerBox.Location = new System.Drawing.Point(288, 261);
+            this.AnswerBox.Name = "AnswerBox";
+            this.AnswerBox.Size = new System.Drawing.Size(198, 35);
+            this.AnswerBox.TabIndex = 0;
+            this.AnswerBox.TextChanged += new System.EventHandler(this.AnswerBox_TextChanged);
+            this.AnswerBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnswerBox_KeyDown);
+            // 
+            // QuestionLabel
+            // 
+            this.QuestionLabel.AutoSize = true;
+            this.QuestionLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.QuestionLabel.Location = new System.Drawing.Point(288, 173);
+            this.QuestionLabel.Name = "QuestionLabel";
+            this.QuestionLabel.Size = new System.Drawing.Size(111, 32);
+            this.QuestionLabel.TabIndex = 1;
+            this.QuestionLabel.Text = "Question";
+            this.QuestionLabel.Click += new System.EventHandler(this.QuestionLabel_Click);
+            // 
+            // CheckButton
+            // 
+            this.CheckButton.Location = new System.Drawing.Point(324, 332);
+            this.CheckButton.Name = "CheckButton";
+            this.CheckButton.Size = new System.Drawing.Size(114, 40);
+            this.CheckButton.TabIndex = 0;
+            this.CheckButton.Text = "Check";
+            this.CheckButton.UseVisualStyleBackColor = true;
+            this.CheckButton.Click += new System.EventHandler(this.CheckButton_Click);
             // 
             // IntroLabel
             // 
@@ -95,36 +163,6 @@ namespace Form_Ver
             this.ReadyButton.UseVisualStyleBackColor = true;
             this.ReadyButton.Click += new System.EventHandler(this.ReadyButton_Click);
             // 
-            // CheckButton
-            // 
-            this.CheckButton.Location = new System.Drawing.Point(324, 332);
-            this.CheckButton.Name = "CheckButton";
-            this.CheckButton.Size = new System.Drawing.Size(114, 40);
-            this.CheckButton.TabIndex = 0;
-            this.CheckButton.Text = "Check";
-            this.CheckButton.UseVisualStyleBackColor = true;
-            this.CheckButton.Click += new System.EventHandler(this.CheckButton_Click);
-            // 
-            // QuestionLabel
-            // 
-            this.QuestionLabel.AutoSize = true;
-            this.QuestionLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.QuestionLabel.Location = new System.Drawing.Point(288, 173);
-            this.QuestionLabel.Name = "QuestionLabel";
-            this.QuestionLabel.Size = new System.Drawing.Size(111, 32);
-            this.QuestionLabel.TabIndex = 1;
-            this.QuestionLabel.Text = "Question";
-            this.QuestionLabel.Click += new System.EventHandler(this.QuestionLabel_Click);
-            // 
-            // AnswerBox
-            // 
-            this.AnswerBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AnswerBox.Location = new System.Drawing.Point(288, 261);
-            this.AnswerBox.Name = "AnswerBox";
-            this.AnswerBox.Size = new System.Drawing.Size(198, 35);
-            this.AnswerBox.TabIndex = 2;
-            this.AnswerBox.TextChanged += new System.EventHandler(this.AnswerBox_TextChanged);
-            // 
             // TestsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -139,6 +177,8 @@ namespace Form_Ver
             this.SpeedTestIntroPanel.PerformLayout();
             this.SpeedTestPanel.ResumeLayout(false);
             this.SpeedTestPanel.PerformLayout();
+            this.TestDonePanel.ResumeLayout(false);
+            this.TestDonePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +194,8 @@ namespace Form_Ver
         private System.Windows.Forms.TextBox AnswerBox;
         private System.Windows.Forms.Label QuestionLabel;
         private System.Windows.Forms.Button CheckButton;
+        private System.Windows.Forms.Panel TestDonePanel;
+        private System.Windows.Forms.Button TestDoneButton;
+        private System.Windows.Forms.Label TestDoneLabel;
     }
 }
