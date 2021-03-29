@@ -29,10 +29,15 @@ namespace Form_Ver
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PanelLoadErrorLabel = new System.Windows.Forms.Label();
             this.SpeedTestIntroPanel = new System.Windows.Forms.Panel();
             this.SpeedTestPanel = new System.Windows.Forms.Panel();
             this.TestDonePanel = new System.Windows.Forms.Panel();
+            this.AnswerAccuracyLabel = new System.Windows.Forms.Label();
+            this.WrongCorrectCountLabel = new System.Windows.Forms.Label();
+            this.AnswerCorrectCountLabel = new System.Windows.Forms.Label();
+            this.TimeResultLabel = new System.Windows.Forms.Label();
             this.TestDoneButton = new System.Windows.Forms.Button();
             this.TestDoneLabel = new System.Windows.Forms.Label();
             this.AnswerBox = new System.Windows.Forms.TextBox();
@@ -40,8 +45,10 @@ namespace Form_Ver
             this.QuestionLabel = new System.Windows.Forms.Label();
             this.CheckButton = new System.Windows.Forms.Button();
             this.SpeedTestCorrectAnswerLabel = new System.Windows.Forms.Label();
+            this.TimeTakenLabel = new System.Windows.Forms.Label();
             this.IntroLabel = new System.Windows.Forms.Label();
             this.ReadyButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SpeedTestIntroPanel.SuspendLayout();
             this.SpeedTestPanel.SuspendLayout();
             this.TestDonePanel.SuspendLayout();
@@ -78,6 +85,7 @@ namespace Form_Ver
             this.SpeedTestPanel.Controls.Add(this.QuestionLabel);
             this.SpeedTestPanel.Controls.Add(this.CheckButton);
             this.SpeedTestPanel.Controls.Add(this.SpeedTestCorrectAnswerLabel);
+            this.SpeedTestPanel.Controls.Add(this.TimeTakenLabel);
             this.SpeedTestPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SpeedTestPanel.Location = new System.Drawing.Point(0, 0);
             this.SpeedTestPanel.Name = "SpeedTestPanel";
@@ -87,6 +95,10 @@ namespace Form_Ver
             // 
             // TestDonePanel
             // 
+            this.TestDonePanel.Controls.Add(this.AnswerAccuracyLabel);
+            this.TestDonePanel.Controls.Add(this.WrongCorrectCountLabel);
+            this.TestDonePanel.Controls.Add(this.AnswerCorrectCountLabel);
+            this.TestDonePanel.Controls.Add(this.TimeResultLabel);
             this.TestDonePanel.Controls.Add(this.TestDoneButton);
             this.TestDonePanel.Controls.Add(this.TestDoneLabel);
             this.TestDonePanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -94,6 +106,51 @@ namespace Form_Ver
             this.TestDonePanel.Name = "TestDonePanel";
             this.TestDonePanel.Size = new System.Drawing.Size(800, 450);
             this.TestDonePanel.TabIndex = 3;
+            // 
+            // AnswerAccuracyLabel
+            // 
+            this.AnswerAccuracyLabel.AutoSize = true;
+            this.AnswerAccuracyLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AnswerAccuracyLabel.Location = new System.Drawing.Point(17, 188);
+            this.AnswerAccuracyLabel.Name = "AnswerAccuracyLabel";
+            this.AnswerAccuracyLabel.Size = new System.Drawing.Size(113, 32);
+            this.AnswerAccuracyLabel.TabIndex = 4;
+            this.AnswerAccuracyLabel.Text = "Accuracy:";
+            this.AnswerAccuracyLabel.Click += new System.EventHandler(this.AnswerAccuracyLabel_Click);
+            // 
+            // WrongCorrectCountLabel
+            // 
+            this.WrongCorrectCountLabel.AutoSize = true;
+            this.WrongCorrectCountLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WrongCorrectCountLabel.Location = new System.Drawing.Point(17, 126);
+            this.WrongCorrectCountLabel.Name = "WrongCorrectCountLabel";
+            this.WrongCorrectCountLabel.Size = new System.Drawing.Size(192, 32);
+            this.WrongCorrectCountLabel.TabIndex = 3;
+            this.WrongCorrectCountLabel.Text = "Answers Wrong: ";
+            this.WrongCorrectCountLabel.Click += new System.EventHandler(this.WrongCorrectCountLabel_Click);
+            // 
+            // AnswerCorrectCountLabel
+            // 
+            this.AnswerCorrectCountLabel.AutoSize = true;
+            this.AnswerCorrectCountLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AnswerCorrectCountLabel.Location = new System.Drawing.Point(17, 94);
+            this.AnswerCorrectCountLabel.Name = "AnswerCorrectCountLabel";
+            this.AnswerCorrectCountLabel.Size = new System.Drawing.Size(197, 32);
+            this.AnswerCorrectCountLabel.TabIndex = 3;
+            this.AnswerCorrectCountLabel.Text = "Answers Correct: ";
+            this.AnswerCorrectCountLabel.Click += new System.EventHandler(this.AnswerCorrectCountLabel_Click);
+            // 
+            // TimeResultLabel
+            // 
+            this.TimeResultLabel.AutoSize = true;
+            this.TimeResultLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TimeResultLabel.Location = new System.Drawing.Point(180, 264);
+            this.TimeResultLabel.Name = "TimeResultLabel";
+            this.TimeResultLabel.Size = new System.Drawing.Size(471, 32);
+            this.TimeResultLabel.TabIndex = 2;
+            this.TimeResultLabel.Text = "You took <> seconds to complete the test!";
+            this.TimeResultLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TimeResultLabel.Click += new System.EventHandler(this.TimeResultLabel_Click);
             // 
             // TestDoneButton
             // 
@@ -109,7 +166,7 @@ namespace Form_Ver
             // 
             this.TestDoneLabel.AutoSize = true;
             this.TestDoneLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TestDoneLabel.Location = new System.Drawing.Point(251, 158);
+            this.TestDoneLabel.Location = new System.Drawing.Point(248, 21);
             this.TestDoneLabel.Name = "TestDoneLabel";
             this.TestDoneLabel.Size = new System.Drawing.Size(298, 64);
             this.TestDoneLabel.TabIndex = 0;
@@ -170,6 +227,17 @@ namespace Form_Ver
             this.SpeedTestCorrectAnswerLabel.Text = "Answers Correct: 0";
             this.SpeedTestCorrectAnswerLabel.Click += new System.EventHandler(this.SpeedTestCorrectAnswerLabel_Click);
             // 
+            // TimeTakenLabel
+            // 
+            this.TimeTakenLabel.AutoSize = true;
+            this.TimeTakenLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TimeTakenLabel.Location = new System.Drawing.Point(565, 94);
+            this.TimeTakenLabel.Name = "TimeTakenLabel";
+            this.TimeTakenLabel.Size = new System.Drawing.Size(147, 32);
+            this.TimeTakenLabel.TabIndex = 6;
+            this.TimeTakenLabel.Text = "Time Taken: ";
+            this.TimeTakenLabel.Click += new System.EventHandler(this.TimeTakenLabel_Click);
+            // 
             // IntroLabel
             // 
             this.IntroLabel.AutoSize = true;
@@ -189,6 +257,10 @@ namespace Form_Ver
             this.ReadyButton.Text = "Ready";
             this.ReadyButton.UseVisualStyleBackColor = true;
             this.ReadyButton.Click += new System.EventHandler(this.ReadyButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // TestsForm
             // 
@@ -226,5 +298,11 @@ namespace Form_Ver
         private System.Windows.Forms.Label TestDoneLabel;
         private System.Windows.Forms.Label SpeedTestWrongAnswerLabel;
         private System.Windows.Forms.Label SpeedTestCorrectAnswerLabel;
+        private System.Windows.Forms.Label TimeTakenLabel;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label TimeResultLabel;
+        private System.Windows.Forms.Label WrongCorrectCountLabel;
+        private System.Windows.Forms.Label AnswerCorrectCountLabel;
+        private System.Windows.Forms.Label AnswerAccuracyLabel;
     }
 }

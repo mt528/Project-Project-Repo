@@ -142,7 +142,12 @@ namespace Form_Ver
 
         private void ClassTestButton_Click(object sender, EventArgs e)
         {
+            Program.UserCameFrom = "TEST"; // Tracking where the user came from - This has to be first - Not sure why
 
+            TestsForm TestForm = new TestsForm();
+            this.Hide();
+
+            TestForm.Show();
         }
         #endregion
 

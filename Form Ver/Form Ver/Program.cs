@@ -14,6 +14,30 @@ namespace Form_Ver
         public static List<string> Lesson1Questions = new List<string>();
         public static List<string> Lesson1Answers = new List<string>();
 
+        public static List<string> Lesson2Questions = new List<string>();
+        public static List<string> Lesson2Answers = new List<string>();
+
+        public static List<string> Lesson3Questions = new List<string>();
+        public static List<string> Lesson3Answers = new List<string>();
+
+        public static List<string> Lesson4Questions = new List<string>();
+        public static List<string> Lesson4Answers = new List<string>();
+
+        public static List<string> Lesson5Questions = new List<string>();
+        public static List<string> Lesson5Answers = new List<string>();
+
+        public static List<string> Lesson6Questions = new List<string>();
+        public static List<string> Lesson6Answers = new List<string>();
+
+        public static List<string> Lesson7Questions = new List<string>();
+        public static List<string> Lesson7Answers = new List<string>();
+
+        public static List<string> Lesson8Questions = new List<string>();
+        public static List<string> Lesson8Answers = new List<string>();
+
+        public static List<string> TestQuestions = new List<string>();
+        public static List<string> TestAnswers = new List<string>();
+
         //-------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------
         /// Variable to track where the user came from for the test
@@ -46,6 +70,10 @@ namespace Form_Ver
         public static int CorrectAnswerCount = 0;
         public static int WrongAnswerCount = 0;
 
+        //-------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------
+        /// Timer variable 
+        public static int TimerValue;
         //-------------------------------------------------------------------------------------
         /// <summary>
         ///  The main entry point for the application.

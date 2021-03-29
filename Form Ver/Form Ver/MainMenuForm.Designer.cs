@@ -146,9 +146,9 @@ namespace Form_Ver
             // 
             // HiraganaButton
             // 
-            this.HiraganaButton.Location = new System.Drawing.Point(81, 289);
+            this.HiraganaButton.Location = new System.Drawing.Point(66, 295);
             this.HiraganaButton.Name = "HiraganaButton";
-            this.HiraganaButton.Size = new System.Drawing.Size(97, 23);
+            this.HiraganaButton.Size = new System.Drawing.Size(131, 42);
             this.HiraganaButton.TabIndex = 3;
             this.HiraganaButton.Text = "Start Learning";
             this.HiraganaButton.UseVisualStyleBackColor = true;
