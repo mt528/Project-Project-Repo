@@ -49,6 +49,11 @@ namespace Form_Ver
             this.Lesson8Button = new System.Windows.Forms.Button();
             this.ClassTestLabel = new System.Windows.Forms.Label();
             this.ClassTestButton = new System.Windows.Forms.Button();
+            this.TestModePanel = new System.Windows.Forms.Panel();
+            this.ShortTestButton = new System.Windows.Forms.Button();
+            this.FullTestButton = new System.Windows.Forms.Button();
+            this.TestModeLabel = new System.Windows.Forms.Label();
+            this.TestModePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ExplanationLabel
@@ -273,11 +278,55 @@ namespace Form_Ver
             this.ClassTestButton.UseVisualStyleBackColor = true;
             this.ClassTestButton.Click += new System.EventHandler(this.ClassTestButton_Click);
             // 
+            // TestModePanel
+            // 
+            this.TestModePanel.Controls.Add(this.TestModeLabel);
+            this.TestModePanel.Controls.Add(this.FullTestButton);
+            this.TestModePanel.Controls.Add(this.ShortTestButton);
+            this.TestModePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TestModePanel.Location = new System.Drawing.Point(0, 0);
+            this.TestModePanel.Name = "TestModePanel";
+            this.TestModePanel.Size = new System.Drawing.Size(800, 450);
+            this.TestModePanel.TabIndex = 22;
+            // 
+            // ShortTestButton
+            // 
+            this.ShortTestButton.Location = new System.Drawing.Point(158, 310);
+            this.ShortTestButton.Name = "ShortTestButton";
+            this.ShortTestButton.Size = new System.Drawing.Size(144, 43);
+            this.ShortTestButton.TabIndex = 0;
+            this.ShortTestButton.Text = "Short";
+            this.ShortTestButton.UseVisualStyleBackColor = true;
+            this.ShortTestButton.Click += new System.EventHandler(this.ShortTestButton_Click);
+            // 
+            // FullTestButton
+            // 
+            this.FullTestButton.Location = new System.Drawing.Point(478, 310);
+            this.FullTestButton.Name = "FullTestButton";
+            this.FullTestButton.Size = new System.Drawing.Size(144, 43);
+            this.FullTestButton.TabIndex = 1;
+            this.FullTestButton.Text = "Full";
+            this.FullTestButton.UseVisualStyleBackColor = true;
+            this.FullTestButton.Click += new System.EventHandler(this.FullTestButton_Click);
+            // 
+            // TestModeLabel
+            // 
+            this.TestModeLabel.AutoSize = true;
+            this.TestModeLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestModeLabel.Location = new System.Drawing.Point(33, 92);
+            this.TestModeLabel.Name = "TestModeLabel";
+            this.TestModeLabel.Size = new System.Drawing.Size(749, 128);
+            this.TestModeLabel.TabIndex = 2;
+            this.TestModeLabel.Text = "What type of test do you want to do?\r\n\r\nFull test: All possible Hiragana will be " +
+    "tested\r\nShort: The Hiragana symbols will be tested without the combinations";
+            this.TestModeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // HiraganaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TestModePanel);
             this.Controls.Add(this.ClassTestButton);
             this.Controls.Add(this.ClassTestLabel);
             this.Controls.Add(this.Lesson8Button);
@@ -304,6 +353,8 @@ namespace Form_Ver
             this.Text = "HiraganaMenu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HiraganaMenu_FormClosed);
             this.Load += new System.EventHandler(this.HiraganaMenu_Load);
+            this.TestModePanel.ResumeLayout(false);
+            this.TestModePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,5 +382,9 @@ namespace Form_Ver
         private System.Windows.Forms.Button Lesson8Button;
         private System.Windows.Forms.Label ClassTestLabel;
         private System.Windows.Forms.Button ClassTestButton;
+        private System.Windows.Forms.Panel TestModePanel;
+        private System.Windows.Forms.Button FullTestButton;
+        private System.Windows.Forms.Button ShortTestButton;
+        private System.Windows.Forms.Label TestModeLabel;
     }
 }

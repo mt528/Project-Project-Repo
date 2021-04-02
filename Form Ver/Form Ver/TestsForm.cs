@@ -103,20 +103,33 @@ namespace Form_Ver
             NewQuestionList(Program.Questions, AnswerStatus); // Edits the list (if needed)
             NewAnswerList(Program.Answers, AnswerStatus); // Edits the list (if needed)
 
-            
-            
+
+
             /// This will happen when the list is empty
-            /// It will rebuild the
-            if (Program.Questions.Count == 0 && Program.TestDone == false)
+            if (Program.Questions.Count == 0 && Program.TestDone == false) 
             {
-                /// To refil the lists ONCE when it is empty
-                Program.Questions = QuestionListInUse();
-                Program.Answers = AnswerListInUse();
+
+                
+                /// It will rebuild the deck
+                if (Program.UserCameFrom == "TEST" | Program.UserCameFrom != "TESTshort") 
+                {
+                    /// To refil the lists ONCE when it is empty
+                    Program.Questions = QuestionListInUse();
+                    Program.Answers = AnswerListInUse();
+
+                    //Program.TestDone = true; // To finish the test when this list is empty
+
+                    //AnswerBox.Focus();
+                }
+
 
                 Program.TestDone = true; // To finish the test when this list is empty
 
                 //AnswerBox.Focus();
             }
+
+
+            
 
             /// This will run when the test if over
             if (Program.Questions.Count == 0 && Program.TestDone == true)
@@ -328,6 +341,12 @@ namespace Form_Ver
 
                     Questions = Program.TestQuestions;
                     break;
+
+                case ("TESTshort"):
+                    TestShortQuestionContent(Program.TestQuestions);// Adding content to the list
+
+                    Questions = Program.TestQuestions;
+                    break;
             }
             return Questions;
             
@@ -386,6 +405,11 @@ namespace Form_Ver
 
                 case ("TEST"):
                     TestAnswerContent(Program.TestAnswers);// Adding content to the list
+                    Answers = Program.TestAnswers;
+                    break;
+
+                case ("TESTshort"):
+                    TestShortAnswerContent(Program.TestAnswers);// Adding content to the list
                     Answers = Program.TestAnswers;
                     break;
             }
@@ -875,6 +899,43 @@ namespace Form_Ver
             Lesson7AnswerContent(AnswerContent);
 
             Lesson8AnswerContent(AnswerContent);
+            return AnswerContent;
+        }
+
+        //------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------
+        // Short Verison
+        List<string> TestShortQuestionContent(List<string> QuestionContent)
+        {
+            // Adding the previous lesson constuctior to make the test elements
+            Lesson1QuestionContent(QuestionContent);
+
+            Lesson2QuestionContent(QuestionContent);
+
+            Lesson3QuestionContent(QuestionContent);
+
+            Lesson4QuestionContent(QuestionContent);
+
+            Lesson5QuestionContent(QuestionContent);
+
+            
+            return QuestionContent;
+        }
+
+        List<string> TestShortAnswerContent(List<string> AnswerContent)
+        {
+            // Adding the previous lesson constuctor to make the test elements
+            Lesson1AnswerContent(AnswerContent);
+
+            Lesson2AnswerContent(AnswerContent);
+
+            Lesson3AnswerContent(AnswerContent);
+
+            Lesson4AnswerContent(AnswerContent);
+
+            Lesson5AnswerContent(AnswerContent);
+
+            
             return AnswerContent;
         }
 

@@ -11,3 +11,7 @@ during the test. - Matt 27/03/21
 
 The hiragana constructors are done and a version of the test is ready however, some changes need to be made as the test button is missing the stage asking the user
 what test they want to do. I will do that soon. - Matt 29/03/2021
+
+
+The tests will now have two seperate mode that will include a version that has the hiragana symbols and a full version that will have ALL possilbe hiragana
+characters. Also added better of quality of life for tests - they will not repeat the content, found this meant the tests went on too long. - Matt 02/04/2021

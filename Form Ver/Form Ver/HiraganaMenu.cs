@@ -14,6 +14,7 @@ namespace Form_Ver
         public HiraganaMenu()
         {
             InitializeComponent();
+            TestModePanel.Hide();
         }
         private void HiraganaMenu_Load(object sender, EventArgs e)
         {
@@ -28,6 +29,32 @@ namespace Form_Ver
         {
 
         }
+
+        #region Test Decider Mode Elements
+        private void ShortTestButton_Click(object sender, EventArgs e)
+        {
+            
+            Program.UserCameFrom = "TESTshort"; // Tracking where the user came from - This has to be first - Not sure why
+
+            TestsForm TestForm = new TestsForm();
+            this.Hide();
+
+            TestForm.Show();
+            
+        }
+
+        private void FullTestButton_Click(object sender, EventArgs e)
+        {
+            
+            Program.UserCameFrom = "TEST"; // Tracking where the user came from - This has to be first - Not sure why
+
+            TestsForm TestForm = new TestsForm();
+            this.Hide();
+
+            TestForm.Show();
+            
+        }
+        #endregion
 
 
         #region Lesson and Test Components
@@ -142,12 +169,15 @@ namespace Form_Ver
 
         private void ClassTestButton_Click(object sender, EventArgs e)
         {
+            TestModePanel.Show();
+            /*
             Program.UserCameFrom = "TEST"; // Tracking where the user came from - This has to be first - Not sure why
 
             TestsForm TestForm = new TestsForm();
             this.Hide();
 
             TestForm.Show();
+            */
         }
         #endregion
 
@@ -169,6 +199,7 @@ namespace Form_Ver
             this.Hide(); // Hide the current form 
             MainMenu.Show(); // Show the main menu form
         }
+
 
 
 
