@@ -15,3 +15,7 @@ what test they want to do. I will do that soon. - Matt 29/03/2021
 
 The tests will now have two seperate mode that will include a version that has the hiragana symbols and a full version that will have ALL possilbe hiragana
 characters. Also added better of quality of life for tests - they will not repeat the content, found this meant the tests went on too long. - Matt 02/04/2021
+
+Created a kanji lesson. I used 18 panels to do and I found visual studio get VERY lagy with this method so I will need to find or ask for another method as I like that 
+it doesn't create new forms and makes the user experience smooth however they may be a way to avoid this via code, I will have to look or ask a lecturer (Beth or Tina).
+The lesson is made a rough testing has taken place, just need to add it to the documentation. - Matt 05/04/2021

@@ -34,7 +34,7 @@ namespace Form_Ver
             this.JapaneseLabel = new System.Windows.Forms.Label();
             this.JapaneseButton = new System.Windows.Forms.Button();
             this.JapanesePanel = new System.Windows.Forms.Panel();
-            this.ComingSoonLabel2 = new System.Windows.Forms.Label();
+            this.KanjiButton = new System.Windows.Forms.Button();
             this.KanjiLabel = new System.Windows.Forms.Label();
             this.ComingSoonLabel1 = new System.Windows.Forms.Label();
             this.KatakanaLabel = new System.Windows.Forms.Label();
@@ -42,6 +42,7 @@ namespace Form_Ver
             this.HiraganaLabel = new System.Windows.Forms.Label();
             this.JapaneseLabel2 = new System.Windows.Forms.Label();
             this.JapaneseLabel1 = new System.Windows.Forms.Label();
+            this.GoBackButton = new System.Windows.Forms.Button();
             this.JapanesePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +89,8 @@ namespace Form_Ver
             // 
             // JapanesePanel
             // 
-            this.JapanesePanel.Controls.Add(this.ComingSoonLabel2);
+            this.JapanesePanel.Controls.Add(this.GoBackButton);
+            this.JapanesePanel.Controls.Add(this.KanjiButton);
             this.JapanesePanel.Controls.Add(this.KanjiLabel);
             this.JapanesePanel.Controls.Add(this.ComingSoonLabel1);
             this.JapanesePanel.Controls.Add(this.KatakanaLabel);
@@ -104,21 +106,21 @@ namespace Form_Ver
             this.JapanesePanel.TabIndex = 4;
             this.JapanesePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.JapanesePanel_Paint);
             // 
-            // ComingSoonLabel2
+            // KanjiButton
             // 
-            this.ComingSoonLabel2.AutoSize = true;
-            this.ComingSoonLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ComingSoonLabel2.Location = new System.Drawing.Point(597, 282);
-            this.ComingSoonLabel2.Name = "ComingSoonLabel2";
-            this.ComingSoonLabel2.Size = new System.Drawing.Size(144, 30);
-            this.ComingSoonLabel2.TabIndex = 7;
-            this.ComingSoonLabel2.Text = "Coming Soon!";
+            this.KanjiButton.Location = new System.Drawing.Point(597, 278);
+            this.KanjiButton.Name = "KanjiButton";
+            this.KanjiButton.Size = new System.Drawing.Size(131, 42);
+            this.KanjiButton.TabIndex = 8;
+            this.KanjiButton.Text = "Start Learning";
+            this.KanjiButton.UseVisualStyleBackColor = true;
+            this.KanjiButton.Click += new System.EventHandler(this.KanjiButton_Click);
             // 
             // KanjiLabel
             // 
             this.KanjiLabel.AutoSize = true;
             this.KanjiLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.KanjiLabel.Location = new System.Drawing.Point(628, 239);
+            this.KanjiLabel.Location = new System.Drawing.Point(628, 222);
             this.KanjiLabel.Name = "KanjiLabel";
             this.KanjiLabel.Size = new System.Drawing.Size(76, 37);
             this.KanjiLabel.TabIndex = 6;
@@ -128,7 +130,7 @@ namespace Form_Ver
             // 
             this.ComingSoonLabel1.AutoSize = true;
             this.ComingSoonLabel1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ComingSoonLabel1.Location = new System.Drawing.Point(346, 282);
+            this.ComingSoonLabel1.Location = new System.Drawing.Point(346, 265);
             this.ComingSoonLabel1.Name = "ComingSoonLabel1";
             this.ComingSoonLabel1.Size = new System.Drawing.Size(144, 30);
             this.ComingSoonLabel1.TabIndex = 5;
@@ -138,7 +140,7 @@ namespace Form_Ver
             // 
             this.KatakanaLabel.AutoSize = true;
             this.KatakanaLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.KatakanaLabel.Location = new System.Drawing.Point(346, 239);
+            this.KatakanaLabel.Location = new System.Drawing.Point(346, 222);
             this.KatakanaLabel.Name = "KatakanaLabel";
             this.KatakanaLabel.Size = new System.Drawing.Size(126, 37);
             this.KatakanaLabel.TabIndex = 4;
@@ -146,7 +148,7 @@ namespace Form_Ver
             // 
             // HiraganaButton
             // 
-            this.HiraganaButton.Location = new System.Drawing.Point(66, 295);
+            this.HiraganaButton.Location = new System.Drawing.Point(66, 278);
             this.HiraganaButton.Name = "HiraganaButton";
             this.HiraganaButton.Size = new System.Drawing.Size(131, 42);
             this.HiraganaButton.TabIndex = 3;
@@ -158,7 +160,7 @@ namespace Form_Ver
             // 
             this.HiraganaLabel.AutoSize = true;
             this.HiraganaLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HiraganaLabel.Location = new System.Drawing.Point(66, 239);
+            this.HiraganaLabel.Location = new System.Drawing.Point(66, 222);
             this.HiraganaLabel.Name = "HiraganaLabel";
             this.HiraganaLabel.Size = new System.Drawing.Size(125, 37);
             this.HiraganaLabel.TabIndex = 2;
@@ -183,6 +185,16 @@ namespace Form_Ver
             this.JapaneseLabel1.Size = new System.Drawing.Size(658, 40);
             this.JapaneseLabel1.TabIndex = 0;
             this.JapaneseLabel1.Text = "With Japanese there are different writting systems.";
+            // 
+            // GoBackButton
+            // 
+            this.GoBackButton.Location = new System.Drawing.Point(24, 397);
+            this.GoBackButton.Name = "GoBackButton";
+            this.GoBackButton.Size = new System.Drawing.Size(131, 42);
+            this.GoBackButton.TabIndex = 9;
+            this.GoBackButton.Text = "Go Back";
+            this.GoBackButton.UseVisualStyleBackColor = true;
+            this.GoBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
             // MainMenuForm
             // 
@@ -213,7 +225,6 @@ namespace Form_Ver
         private System.Windows.Forms.Label JapaneseLabel;
         private System.Windows.Forms.Button JapaneseButton;
         private System.Windows.Forms.Panel JapanesePanel;
-        private System.Windows.Forms.Label ComingSoonLabel2;
         private System.Windows.Forms.Label KanjiLabel;
         private System.Windows.Forms.Label ComingSoonLabel1;
         private System.Windows.Forms.Label KatakanaLabel;
@@ -221,5 +232,7 @@ namespace Form_Ver
         private System.Windows.Forms.Label HiraganaLabel;
         private System.Windows.Forms.Label JapaneseLabel2;
         private System.Windows.Forms.Label JapaneseLabel1;
+        private System.Windows.Forms.Button KanjiButton;
+        private System.Windows.Forms.Button GoBackButton;
     }
 }

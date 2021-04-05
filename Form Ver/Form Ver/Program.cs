@@ -8,6 +8,7 @@ namespace Form_Ver
 {
     static class Program
     {
+        #region Hiragana Lists
         //-------------------------------------------------------------------------------------
         /// Making the Lists
         /// Note: Remember to make it a "public static"
@@ -39,6 +40,20 @@ namespace Form_Ver
         public static List<string> TestAnswers = new List<string>();
 
         //-------------------------------------------------------------------------------------
+        #endregion 
+
+
+
+        #region Test Variables 
+        //-------------------------------------------------------------------------------------
+        /// To store the lists in use
+        public static List<string> Questions = new List<string>();
+        public static List<string> Answers = new List<string>();
+
+
+        /// For the second iteration of the tests
+        public static List<string> QuestionsSecondIteration = new List<string>();
+        public static List<string> AnswerSecondIteration = new List<string>();
         //-------------------------------------------------------------------------------------
         /// Variable to track where the user came from for the test
         public static string UserCameFrom;
@@ -48,16 +63,6 @@ namespace Form_Ver
         /// To store the Random Index value made
         public static int IndexInUse;
         //-------------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------------
-        /// To store the lists in use
-        public static List<string> Questions = new List<string>();
-        public static List<string> Answers = new List<string>();
-
-        
-        /// For the second iteration of the tests
-        public static List<string> QuestionsSecondIteration = new List<string>();
-        public static List<string> AnswerSecondIteration = new List<string>();
-
         //-------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------
         /// To help with a if statement 
@@ -73,7 +78,9 @@ namespace Form_Ver
         //-------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------
         /// Timer variable 
+        /// To store the number within the timer 
         public static int TimerValue;
+        #endregion
         //-------------------------------------------------------------------------------------
         /// <summary>
         ///  The main entry point for the application.

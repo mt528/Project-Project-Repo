@@ -427,6 +427,7 @@ namespace Form_Ver
             Program.UserCameFrom = "L1"; // Tracking where the user came from - This has to be first - Not sure why
 
             TestsForm TestForm = new TestsForm();
+            
             this.Hide();
             
             TestForm.Show();
