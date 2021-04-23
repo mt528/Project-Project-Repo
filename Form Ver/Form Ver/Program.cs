@@ -80,6 +80,44 @@ namespace Form_Ver
         /// Timer variable 
         /// To store the number within the timer 
         public static int TimerValue;
+        //-------------------------------------------------------------------------------------
+        #region Mistake Tracker
+        // To store the lesson content 
+        public static List<string> Lesson1Ref = new List<string>();
+        public static List<string> Lesson2Ref = new List<string>();
+        public static List<string> Lesson3Ref = new List<string>();
+        public static List<string> Lesson4Ref = new List<string>();
+        public static List<string> Lesson5Ref = new List<string>();
+        public static List<string> Lesson6Ref = new List<string>();
+        public static List<string> Lesson7Ref = new List<string>();
+        public static List<string> Lesson8Ref = new List<string>();
+
+        public static List<List<string>> EveryLessonRef = new List<List<string>>();
+
+        // Mistake Counters
+        public static int L1Incorrect = new int();
+        public static int L2Incorrect = new int();
+        public static int L3Incorrect = new int();
+        public static int L4Incorrect = new int();
+        public static int L5Incorrect = new int();
+        public static int L6Incorrect = new int();
+        public static int L7Incorrect = new int();
+        public static int L8Incorrect = new int();
+
+        #endregion
+
+        #region Kanji Test 
+        public static List<string> KanjiQuestions = new List<string>();
+
+        public static List<List<List<string>>> KanjiAnswers = new List<List<List<string>>>();
+
+        //public static List<List<string>> AnswerForCharacter = new List<List<string>>();
+
+        //public static List<string> SayingOnYomi = new List<string>();
+        //public static List<string> SayingKunYomi = new List<string>();
+
+        #endregion
+
         #endregion
         //-------------------------------------------------------------------------------------
         /// <summary>

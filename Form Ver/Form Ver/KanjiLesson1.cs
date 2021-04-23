@@ -403,7 +403,10 @@ namespace Form_Ver
         #region Recollection Test
         private void KanjiLesson1Panel18RecollectionTestButton_Click(object sender, EventArgs e)
         {
-            // FINISH - TAKE TO NEW FORM
+            KanjiTestForm Form = new KanjiTestForm();
+            this.Hide();
+            Form.Show();
+            Program.UserCameFrom = "K1"; // Lesson 1 Kanji
         }
         #endregion
         #region Speed Test

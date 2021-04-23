@@ -34,6 +34,7 @@ namespace Form_Ver
             this.SpeedTestIntroPanel = new System.Windows.Forms.Panel();
             this.SpeedTestPanel = new System.Windows.Forms.Panel();
             this.TestDonePanel = new System.Windows.Forms.Panel();
+            this.MistakeTrackerLabel = new System.Windows.Forms.Label();
             this.AnswerAccuracyLabel = new System.Windows.Forms.Label();
             this.WrongCorrectCountLabel = new System.Windows.Forms.Label();
             this.AnswerCorrectCountLabel = new System.Windows.Forms.Label();
@@ -95,6 +96,7 @@ namespace Form_Ver
             // 
             // TestDonePanel
             // 
+            this.TestDonePanel.Controls.Add(this.MistakeTrackerLabel);
             this.TestDonePanel.Controls.Add(this.AnswerAccuracyLabel);
             this.TestDonePanel.Controls.Add(this.WrongCorrectCountLabel);
             this.TestDonePanel.Controls.Add(this.AnswerCorrectCountLabel);
@@ -106,6 +108,17 @@ namespace Form_Ver
             this.TestDonePanel.Name = "TestDonePanel";
             this.TestDonePanel.Size = new System.Drawing.Size(800, 450);
             this.TestDonePanel.TabIndex = 3;
+            // 
+            // MistakeTrackerLabel
+            // 
+            this.MistakeTrackerLabel.AutoSize = true;
+            this.MistakeTrackerLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MistakeTrackerLabel.Location = new System.Drawing.Point(558, 92);
+            this.MistakeTrackerLabel.Name = "MistakeTrackerLabel";
+            this.MistakeTrackerLabel.Size = new System.Drawing.Size(230, 270);
+            this.MistakeTrackerLabel.TabIndex = 5;
+            this.MistakeTrackerLabel.Text = "Lesson Content Wrong:\r\nLesson 1:\r\nLesson 2:\r\nLesson 3:\r\nLesson 4:\r\nLesson 5:\r\nLes" +
+    "son 6:\r\nLesson 7:\r\nLesson 8:";
             // 
             // AnswerAccuracyLabel
             // 
@@ -144,7 +157,7 @@ namespace Form_Ver
             // 
             this.TimeResultLabel.AutoSize = true;
             this.TimeResultLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TimeResultLabel.Location = new System.Drawing.Point(180, 264);
+            this.TimeResultLabel.Location = new System.Drawing.Point(17, 264);
             this.TimeResultLabel.Name = "TimeResultLabel";
             this.TimeResultLabel.Size = new System.Drawing.Size(471, 32);
             this.TimeResultLabel.TabIndex = 2;
@@ -304,5 +317,6 @@ namespace Form_Ver
         private System.Windows.Forms.Label WrongCorrectCountLabel;
         private System.Windows.Forms.Label AnswerCorrectCountLabel;
         private System.Windows.Forms.Label AnswerAccuracyLabel;
+        private System.Windows.Forms.Label MistakeTrackerLabel;
     }
 }
