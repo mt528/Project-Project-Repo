@@ -19,3 +19,6 @@ characters. Also added better of quality of life for tests - they will not repea
 Created a kanji lesson. I used 18 panels to do and I found visual studio get VERY lagy with this method so I will need to find or ask for another method as I like that 
 it doesn't create new forms and makes the user experience smooth however they may be a way to avoid this via code, I will have to look or ask a lecturer (Beth or Tina).
 The lesson is made a rough testing has taken place, just need to add it to the documentation. - Matt 05/04/2021
+
+The kanji Lesson test has been implamented. Had an issue with commiting the test form cs file as git would not add it to the commit. I fixed this but just changing the code 
+(i added a extra line so nothing major) - Matt 23/04/2021
