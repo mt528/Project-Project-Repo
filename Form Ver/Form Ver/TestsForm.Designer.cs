@@ -113,7 +113,7 @@ namespace Form_Ver
             // 
             this.MistakeTrackerLabel.AutoSize = true;
             this.MistakeTrackerLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MistakeTrackerLabel.Location = new System.Drawing.Point(558, 92);
+            this.MistakeTrackerLabel.Location = new System.Drawing.Point(549, 102);
             this.MistakeTrackerLabel.Name = "MistakeTrackerLabel";
             this.MistakeTrackerLabel.Size = new System.Drawing.Size(230, 270);
             this.MistakeTrackerLabel.TabIndex = 5;

@@ -14,10 +14,13 @@ namespace Form_Ver
         {
             Program.TestDone = false; // To restart the state incase the user does more than 1 test
 
+
             InitializeComponent();
             SpeedTestPanel.Hide();
             TestDonePanel.Hide();
-            
+
+            GenerateRefrences(); // Generate refrences for test (whole or short) MAY NEED TO BE MOVED
+
             // Setting up the first question
             Program.Questions = QuestionListInUse();
             Program.Answers = AnswerListInUse();
@@ -984,6 +987,8 @@ namespace Form_Ver
         /// This taking the answer and seeing if it mathces the 
         /// question in the location that we are using at that time
         /// This returns a boolean output
+        /// 
+        /// This will also update the mistake tracker 
         /// </summary>
         /// <param name="Answer"></param>
         /// <returns></returns>
@@ -997,6 +1002,7 @@ namespace Form_Ver
             }
             else 
             {
+                MistakeTracker(Program.Answers[Program.IndexInUse]); // Mistake tracker method
                 return false; 
             }
         }
@@ -1110,6 +1116,92 @@ namespace Form_Ver
         }
         #endregion
 
+        #region Mistake Tracker
+        /// <summary>
+        /// this is iterating through the lists and then the content within those lists to see if the answer 
+        /// the program was looking matches with that data 
+        /// If it does it will make a count based on what lesson the program was in when it found a match
+        /// </summary>
+        /// <param name="AnswerRef"></param>
+        static void MistakeTracker(string AnswerRef)
+        {
+            for (int i = 0; i < Program.EveryLessonRef.Count; i++) // Iterate through each list
+            {
+                for (int e = 0; e < Program.EveryLessonRef[i].Count; e++) // Iterate through the content of that list
+                {
+                    if (Program.EveryLessonRef[i][e] == Program.TestAnswers[Program.IndexInUse])
+                    {
+                        switch (i)
+                        {
+                            case (0): // Lesson 1
+                                Program.L1Incorrect = Program.L1Incorrect + 1;
+                                break;
+                            case (1): // Lesson 2
+                                Program.L2Incorrect = Program.L2Incorrect + 1;
+                                break;
+                            case (2): // Lesson 3
+                                Program.L3Incorrect = Program.L3Incorrect + 1;
+                                break;
+                            case (3): // Lesson 4
+                                Program.L4Incorrect = Program.L4Incorrect + 1;
+                                break;
+                            case (4): // Lesson 5
+                                Program.L5Incorrect = Program.L5Incorrect + 1;
+                                break;
+                            case (5): // Lesson 6
+                                Program.L6Incorrect = Program.L6Incorrect + 1;
+                                break;
+                            case (6): // Lesson 7
+                                Program.L7Incorrect = Program.L7Incorrect + 1;
+                                break;
+                            case (7): // Lesson 8
+                                Program.L8Incorrect = Program.L8Incorrect + 1;
+                                break;
+                        }
+                    }
+                        
+                }
+            }
+        }
+
+        /// <summary>
+        /// Filling the refrences lists with the correct content
+        /// then putting those lists in one 'hub' list
+        /// </summary>
+         void GenerateRefrences()
+        {
+            // Filling the leson ref lists
+            Lesson1AnswerContent(Program.Lesson1Ref);
+            Lesson2AnswerContent(Program.Lesson2Ref);
+            Lesson3AnswerContent(Program.Lesson3Ref);
+            Lesson4AnswerContent(Program.Lesson4Ref);
+            Lesson5AnswerContent(Program.Lesson5Ref);
+            Lesson6AnswerContent(Program.Lesson6Ref);
+            Lesson7AnswerContent(Program.Lesson7Ref);
+            Lesson8AnswerContent(Program.Lesson8Ref);
+
+
+            Program.EveryLessonRef.Add(Program.Lesson1Ref);
+            Program.EveryLessonRef.Add(Program.Lesson2Ref);
+            Program.EveryLessonRef.Add(Program.Lesson3Ref);
+            Program.EveryLessonRef.Add(Program.Lesson4Ref);
+            Program.EveryLessonRef.Add(Program.Lesson5Ref);
+            Program.EveryLessonRef.Add(Program.Lesson6Ref);
+            Program.EveryLessonRef.Add(Program.Lesson7Ref);
+            Program.EveryLessonRef.Add(Program.Lesson8Ref);
+
+            // Setting the variables to 0 incase they crash later 
+            Program.L1Incorrect = 0;
+            Program.L2Incorrect = 0;
+            Program.L3Incorrect = 0;
+            Program.L4Incorrect = 0;
+            Program.L5Incorrect = 0;
+            Program.L6Incorrect = 0;
+            Program.L7Incorrect = 0;
+            Program.L8Incorrect = 0;
+        }
+        #endregion
+
         #region Contructor for end of test
         public void EndOfTest()
         {
@@ -1122,6 +1214,9 @@ namespace Form_Ver
             AnswerCorrectCountLabel.Text = "Answers Correct: " + Program.CorrectAnswerCount.ToString();
             WrongCorrectCountLabel.Text = "Answers Wrong: " + Program.WrongAnswerCount.ToString();
             AccuracyCalc(); // To calc the accuracy during the test
+
+            // Formating the weak areas label with the correct text and data
+            MistakeTrackerLabel.Text = "Lesson Content Wrong:" + "\nLesson 1: " + Program.L1Incorrect.ToString() + "\nLesson 2: " + Program.L2Incorrect.ToString() + "\nLesson 3: " + Program.L3Incorrect.ToString() + "\nLesson 4: " + Program.L4Incorrect.ToString() + "\nLesson 5: " + Program.L5Incorrect.ToString() + "\nLesson 6: " + Program.L6Incorrect.ToString() + "\nLesson 7: " + Program.L7Incorrect.ToString() + "\nLesson 8: " + Program.L8Incorrect.ToString();
         }
 
         #endregion
