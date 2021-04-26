@@ -60,7 +60,10 @@ namespace Form_Ver
         #region Kanji Test
         private void KanjiMenuTestButton_Click(object sender, EventArgs e)
         {
-            // FINISH - SHOW A TEST PANEL DECIDING ON TEST METHOD
+            KanjiTestForm Form = new KanjiTestForm();
+            this.Hide();
+            Form.Show();
+            Program.UserCameFrom = "TEST"; // All Kanji content
         }
         #endregion
 

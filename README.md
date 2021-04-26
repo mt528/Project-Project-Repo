@@ -22,3 +22,7 @@ The lesson is made a rough testing has taken place, just need to add it to the d
 
 The kanji Lesson test has been implamented. Had an issue with commiting the test form cs file as git would not add it to the commit. I fixed this but just changing the code 
 (i added a extra line so nothing major) - Matt 23/04/2021
+
+Kanji Lesson 1 Test has been fixed. I will need to finish the whole test for the kanji to include lesson 2 content but as of right now the 
+test button now actually gives you a test. Right now the score system has been implamented for the hiragana tests, as of right now I have no plans to implament 
+this feature for the kanji tests (though it would be better if I did). - Matt 26/04/2021

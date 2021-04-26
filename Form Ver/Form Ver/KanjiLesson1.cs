@@ -409,6 +409,7 @@ namespace Form_Ver
             Program.UserCameFrom = "K1"; // Lesson 1 Kanji
         }
         #endregion
+
         #region Speed Test
         private void KanjiLesson1Panel18SpeedTestButton_Click(object sender, EventArgs e)
         {

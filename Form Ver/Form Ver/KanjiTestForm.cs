@@ -16,6 +16,8 @@ namespace Form_Ver
             KanjiTestQuestionPanel.Hide();
             KanjiTestAnswerPanel.Hide();
             KanjiTestDonePanel.Hide();
+
+            
         }
 
         #region Kanji Test Intro 
@@ -34,18 +36,11 @@ namespace Form_Ver
             Random rnd = new Random(); // Random method
 
             Program.IndexInUse = rnd.Next(0, Program.KanjiQuestions.Count); // Generate a random index number
-
-            /*
-            KanjiTestPanel1QuestionLabel.Text = "What are the readings for:\n" + Program.KanjiQuestions[Program.IndexInUse];
-
-            KanjiTestPanel2AnswerLabel.Text = "What are the readings for:\n" + Program.KanjiQuestions[Program.IndexInUse];
-
-            KanjiTestPanel2KunYomiLabel.Text = KunYomiReadingText(Program.IndexInUse);
-            KanjiTestPanel2OnYomiLabel.Text = OnYomiReadingText(Program.IndexInUse);
-            KanjiTestPanel2MeaningLabel.Text = MeaningReadingText(Program.IndexInUse);
-            */
+ 
 
             // HAVE A TIMED VERSION
+
+            KanjiTestPanel1QuestionLabel.Text = "What are the readings for:\n" + Program.KanjiQuestions[Program.IndexInUse]; // To show the kanji for the first question
         }
         #endregion
 
@@ -117,38 +112,72 @@ namespace Form_Ver
         {
             switch (UserCameFrom)
             {
-                case "K1":
+                case "K1": // Lesson 1 
                     KanjiLesson1Questions();
-                    KanjiAnswersListsGeneration(Program.KanjiQuestions);
+                    KanjiAnswersListsGeneration(Program.KanjiQuestions); // To make the list structure
                     KanjiLesson1Answers();
                     break;
+
+                case "K2": // Lesson 2
+                    //Lesson not finished yet
+                    break;
+
+                case "TEST": // Test
+                    TestQuestionComplier(); // To compile the other lesson contructors
+                    break;
             }
+        }
+
+        /// <summary>
+        /// This will be run when the test button is click
+        /// 
+        /// This is grabbing all of the contructors of the lesson and running them all together
+        /// </summary>
+        static void TestQuestionComplier()
+        {
+            // Lesson 1 
+            KanjiLesson1Questions();
+            KanjiAnswersListsGeneration(Program.KanjiQuestions);
+            KanjiLesson1Answers();
+
+            // Lesson 2 
+            //ADD
         }
         #endregion
 
         #region Kanji Test Content
-        static void KanjiAnswersListsGeneration(List<string> KanjiQuestions)
+        /// <summary>
+        /// This is generating the lists needed to store the answers 
+        /// 
+        /// The questions need to be made FIRST otherwise this does not work 
+        /// 
+        /// This is becuase it needs to know how many quesition characters there are to it can make the correct number of 
+        /// lists.
+        /// </summary>
+        /// <param name="KanjiQuestions"></param>
+        static void KanjiAnswersListsGeneration(List<string> KanjiQuestions) // The question HAVE TO BE MADE FIRST
         {
             // Generating the lists
-            int KanjiQuestionsLength = KanjiQuestions.Count;
+            int KanjiQuestionsLength = KanjiQuestions.Count; // How many quesiton character
 
             for (int i = 0; i < KanjiQuestionsLength; i++)
             {
-                List<string> SayingKunYomi = new List<string>();
-                List<string> SayingOnYomi = new List<string>();
-                List<string> Meaning = new List<string>();
+                List<string> SayingKunYomi = new List<string>(); // make a kun yomi list
+                List<string> SayingOnYomi = new List<string>(); // make a on yomi list
+                List<string> Meaning = new List<string>(); // make a meaning list
 
 
-                List<List<string>> AnswerForCharacter = new List<List<string>>();
+                List<List<string>> AnswerForCharacter = new List<List<string>>(); // a list to store this three lists just made
 
-                AnswerForCharacter.Add(SayingKunYomi);
+                AnswerForCharacter.Add(SayingKunYomi); // Add them 
                 AnswerForCharacter.Add(SayingOnYomi);
                 AnswerForCharacter.Add(Meaning);
 
-                Program.KanjiAnswers.Add(AnswerForCharacter);
+                Program.KanjiAnswers.Add(AnswerForCharacter); // Add that list to a whole list that contains answers
             }
 
         }
+
         #region Lesson 1 
         static void KanjiLesson1Questions()
         {
@@ -316,7 +345,7 @@ namespace Form_Ver
         }
         #endregion
 
-        #region Question Panel
+        #region Question Panel elements
         /// <summary>
         ///  This will make the answer panel have the correct info for the answers 
         /// </summary>
@@ -395,9 +424,11 @@ namespace Form_Ver
 
         private void KanjiTestPanel2CorrectButton_Click(object sender, EventArgs e)
         {
-            // FINISH
+            
             // Removing the correct answer
-            Program.KanjiQuestions.RemoveAt(Program.IndexInUse);
+            Program.KanjiQuestions.RemoveAt(Program.IndexInUse); // To remove the question
+            Program.KanjiAnswers.RemoveAt(Program.IndexInUse); // To remove the answer
+
             //-----------------------------------------------------------------------------------------------
             //-----------------------------------------------------------------------------------------------
             if (Program.KanjiQuestions.Count == 0) // When the program has ran out of questions
@@ -422,8 +453,10 @@ namespace Form_Ver
                 KanjiMeaningLabel.Text = "Meaning:";
                 //-----------------------------------------------------------------------------------------------
             }
-            #endregion
+            
         }
+        #endregion
+
         #region Kanji Test Done Panel Bits
         private void KanjiTestDonePanelButton_Click(object sender, EventArgs e)
         {

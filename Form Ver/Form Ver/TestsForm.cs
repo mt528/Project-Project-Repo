@@ -14,6 +14,9 @@ namespace Form_Ver
         {
             Program.TestDone = false; // To restart the state incase the user does more than 1 test
 
+            // To clean the score variables 
+            Program.Score = 0;
+            Program.PrevTime = 0;
 
             InitializeComponent();
             SpeedTestPanel.Hide();
@@ -996,12 +999,14 @@ namespace Form_Ver
         {
             Answer = Answer.ToUpper();
 
-            if (Answer == Program.Answers[Program.IndexInUse])
+            if (Answer == Program.Answers[Program.IndexInUse]) // Correct
             {
+                ScoreGiver(true);
                 return true;
             }
-            else 
+            else // Wrong
             {
+                ScoreGiver(false);
                 MistakeTracker(Program.Answers[Program.IndexInUse]); // Mistake tracker method
                 return false; 
             }
@@ -1215,10 +1220,85 @@ namespace Form_Ver
             WrongCorrectCountLabel.Text = "Answers Wrong: " + Program.WrongAnswerCount.ToString();
             AccuracyCalc(); // To calc the accuracy during the test
 
+            ScoreResultLabel.Text = "Score: " + Program.Score.ToString(); // Print the score to the label at the end of the test 
+
             // Formating the weak areas label with the correct text and data
             MistakeTrackerLabel.Text = "Lesson Content Wrong:" + "\nLesson 1: " + Program.L1Incorrect.ToString() + "\nLesson 2: " + Program.L2Incorrect.ToString() + "\nLesson 3: " + Program.L3Incorrect.ToString() + "\nLesson 4: " + Program.L4Incorrect.ToString() + "\nLesson 5: " + Program.L5Incorrect.ToString() + "\nLesson 6: " + Program.L6Incorrect.ToString() + "\nLesson 7: " + Program.L7Incorrect.ToString() + "\nLesson 8: " + Program.L8Incorrect.ToString();
         }
 
+        #endregion
+
+        #region Score Giver
+        /// <summary>
+        /// This will be run to calcualte the score for the user during a test in REAL TIME
+        /// 
+        /// This will need a bool to see if the answer is correct
+        /// </summary>
+        public void ScoreGiver(bool AnswerCorrect)
+        {
+            int ScoreAwarded; // To store the score awarded
+
+            int TimeTaken; // To store the time calculated that the user took to answer the quesiton
+            int CurrentTime = Program.TimerValue; // Save current time
+            int LastTime = Program.PrevTime; // Save prev time
+            //--------------------------------------------------------------------------------
+            //--------------------------------------------------------------------------------
+
+            if (AnswerCorrect == false) // Answer wrong
+            {
+                Program.Score = Program.Score - 20; // Take points away for wrong answer
+
+                Program.PrevTime = CurrentTime; // Update the prev time this was used
+
+                ScoreLabel.Text = "Score: " + Program.Score.ToString(); // Update the score
+            }
+
+
+            else // Answer Correct
+            {
+                TimeTaken = CurrentTime - LastTime; // Working out how long it took to answer the question
+                Program.PrevTime = CurrentTime; // Update the prev time this was used
+
+                // Working out the awarded score
+                #region Score Conditions
+                if (TimeTaken < 2 | TimeTaken == 2) // less than 2 secs or equal to 2 
+                {
+                    ScoreAwarded = 100;
+                }
+
+                else if (TimeTaken > 2 && TimeTaken < 7) // within 3 - 6 sec
+                {
+                    ScoreAwarded = 80;
+                }
+
+                else if (TimeTaken > 6 && TimeTaken < 13) // within 7 - 12 sec
+                {
+                    ScoreAwarded = 60;
+                }
+
+                else if (TimeTaken > 12 && TimeTaken < 16) // within 13 - 15 sec
+                {
+                    ScoreAwarded = 40;
+                }
+
+                else if (TimeTaken > 15 && TimeTaken < 21) // within 16 - 20 sec
+                {
+                    ScoreAwarded = 20;
+                }
+
+                else  // Greater than 20 seconds  
+                {
+                    ScoreAwarded = 5;
+                }
+
+                #endregion
+
+                Program.Score = Program.Score + ScoreAwarded; // Updated the score 
+                
+                ScoreLabel.Text = "Score: " + Program.Score.ToString(); // Update the score
+            }
+
+        }
         #endregion
 
         #endregion

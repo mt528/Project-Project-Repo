@@ -33,6 +33,9 @@ namespace Form_Ver
             this.KanjiTestIntroButton = new System.Windows.Forms.Button();
             this.KanjiTestQuestionPanel = new System.Windows.Forms.Panel();
             this.KanjiTestAnswerPanel = new System.Windows.Forms.Panel();
+            this.KanjiTestDonePanel = new System.Windows.Forms.Panel();
+            this.KanjiTestDonePanelLabel = new System.Windows.Forms.Label();
+            this.KanjiTestDonePanelButton = new System.Windows.Forms.Button();
             this.KanjiTestAnswerPanelLabel1 = new System.Windows.Forms.Label();
             this.KanjiTestPanel2CorrectButton = new System.Windows.Forms.Button();
             this.KanjiTestPanel2WrongButton = new System.Windows.Forms.Button();
@@ -46,9 +49,6 @@ namespace Form_Ver
             this.KanjiTestPanel1KunYomiLabel = new System.Windows.Forms.Label();
             this.KanjiTestPanel1QuestionLabel = new System.Windows.Forms.Label();
             this.KanjiTestQuestionPanelLabel1 = new System.Windows.Forms.Label();
-            this.KanjiTestDonePanelButton = new System.Windows.Forms.Button();
-            this.KanjiTestDonePanel = new System.Windows.Forms.Panel();
-            this.KanjiTestDonePanelLabel = new System.Windows.Forms.Label();
             this.KanjiTestQuestionPanel.SuspendLayout();
             this.KanjiTestAnswerPanel.SuspendLayout();
             this.KanjiTestDonePanel.SuspendLayout();
@@ -104,6 +104,36 @@ namespace Form_Ver
             this.KanjiTestAnswerPanel.Name = "KanjiTestAnswerPanel";
             this.KanjiTestAnswerPanel.Size = new System.Drawing.Size(800, 450);
             this.KanjiTestAnswerPanel.TabIndex = 5;
+            // 
+            // KanjiTestDonePanel
+            // 
+            this.KanjiTestDonePanel.Controls.Add(this.KanjiTestDonePanelLabel);
+            this.KanjiTestDonePanel.Controls.Add(this.KanjiTestDonePanelButton);
+            this.KanjiTestDonePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.KanjiTestDonePanel.Location = new System.Drawing.Point(0, 0);
+            this.KanjiTestDonePanel.Name = "KanjiTestDonePanel";
+            this.KanjiTestDonePanel.Size = new System.Drawing.Size(800, 450);
+            this.KanjiTestDonePanel.TabIndex = 7;
+            // 
+            // KanjiTestDonePanelLabel
+            // 
+            this.KanjiTestDonePanelLabel.AutoSize = true;
+            this.KanjiTestDonePanelLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.KanjiTestDonePanelLabel.Location = new System.Drawing.Point(328, 54);
+            this.KanjiTestDonePanelLabel.Name = "KanjiTestDonePanelLabel";
+            this.KanjiTestDonePanelLabel.Size = new System.Drawing.Size(129, 32);
+            this.KanjiTestDonePanelLabel.TabIndex = 6;
+            this.KanjiTestDonePanelLabel.Text = "Well done!";
+            // 
+            // KanjiTestDonePanelButton
+            // 
+            this.KanjiTestDonePanelButton.Location = new System.Drawing.Point(323, 352);
+            this.KanjiTestDonePanelButton.Name = "KanjiTestDonePanelButton";
+            this.KanjiTestDonePanelButton.Size = new System.Drawing.Size(115, 37);
+            this.KanjiTestDonePanelButton.TabIndex = 5;
+            this.KanjiTestDonePanelButton.Text = "Continue";
+            this.KanjiTestDonePanelButton.UseVisualStyleBackColor = true;
+            this.KanjiTestDonePanelButton.Click += new System.EventHandler(this.KanjiTestDonePanelButton_Click);
             // 
             // KanjiTestAnswerPanelLabel1
             // 
@@ -246,36 +276,6 @@ namespace Form_Ver
             this.KanjiTestQuestionPanelLabel1.Size = new System.Drawing.Size(97, 30);
             this.KanjiTestQuestionPanelLabel1.TabIndex = 7;
             this.KanjiTestQuestionPanelLabel1.Text = "Question";
-            // 
-            // KanjiTestDonePanelButton
-            // 
-            this.KanjiTestDonePanelButton.Location = new System.Drawing.Point(323, 352);
-            this.KanjiTestDonePanelButton.Name = "KanjiTestDonePanelButton";
-            this.KanjiTestDonePanelButton.Size = new System.Drawing.Size(115, 37);
-            this.KanjiTestDonePanelButton.TabIndex = 5;
-            this.KanjiTestDonePanelButton.Text = "Continue";
-            this.KanjiTestDonePanelButton.UseVisualStyleBackColor = true;
-            this.KanjiTestDonePanelButton.Click += new System.EventHandler(this.KanjiTestDonePanelButton_Click);
-            // 
-            // KanjiTestDonePanel
-            // 
-            this.KanjiTestDonePanel.Controls.Add(this.KanjiTestDonePanelLabel);
-            this.KanjiTestDonePanel.Controls.Add(this.KanjiTestDonePanelButton);
-            this.KanjiTestDonePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KanjiTestDonePanel.Location = new System.Drawing.Point(0, 0);
-            this.KanjiTestDonePanel.Name = "KanjiTestDonePanel";
-            this.KanjiTestDonePanel.Size = new System.Drawing.Size(800, 450);
-            this.KanjiTestDonePanel.TabIndex = 7;
-            // 
-            // KanjiTestDonePanelLabel
-            // 
-            this.KanjiTestDonePanelLabel.AutoSize = true;
-            this.KanjiTestDonePanelLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.KanjiTestDonePanelLabel.Location = new System.Drawing.Point(328, 54);
-            this.KanjiTestDonePanelLabel.Name = "KanjiTestDonePanelLabel";
-            this.KanjiTestDonePanelLabel.Size = new System.Drawing.Size(129, 32);
-            this.KanjiTestDonePanelLabel.TabIndex = 6;
-            this.KanjiTestDonePanelLabel.Text = "Well done!";
             // 
             // KanjiTestForm
             // 

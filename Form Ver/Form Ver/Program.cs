@@ -118,6 +118,12 @@ namespace Form_Ver
 
         #endregion
 
+        #region Score
+        public static int Score; // Store score
+
+        public static int PrevTime; // To store the last time that score method was used
+        #endregion
+
         #endregion
         //-------------------------------------------------------------------------------------
         /// <summary>

@@ -47,9 +47,11 @@ namespace Form_Ver
             this.CheckButton = new System.Windows.Forms.Button();
             this.SpeedTestCorrectAnswerLabel = new System.Windows.Forms.Label();
             this.TimeTakenLabel = new System.Windows.Forms.Label();
+            this.ScoreLabel = new System.Windows.Forms.Label();
             this.IntroLabel = new System.Windows.Forms.Label();
             this.ReadyButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ScoreResultLabel = new System.Windows.Forms.Label();
             this.SpeedTestIntroPanel.SuspendLayout();
             this.SpeedTestPanel.SuspendLayout();
             this.TestDonePanel.SuspendLayout();
@@ -87,6 +89,7 @@ namespace Form_Ver
             this.SpeedTestPanel.Controls.Add(this.CheckButton);
             this.SpeedTestPanel.Controls.Add(this.SpeedTestCorrectAnswerLabel);
             this.SpeedTestPanel.Controls.Add(this.TimeTakenLabel);
+            this.SpeedTestPanel.Controls.Add(this.ScoreLabel);
             this.SpeedTestPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SpeedTestPanel.Location = new System.Drawing.Point(0, 0);
             this.SpeedTestPanel.Name = "SpeedTestPanel";
@@ -96,6 +99,7 @@ namespace Form_Ver
             // 
             // TestDonePanel
             // 
+            this.TestDonePanel.Controls.Add(this.ScoreResultLabel);
             this.TestDonePanel.Controls.Add(this.MistakeTrackerLabel);
             this.TestDonePanel.Controls.Add(this.AnswerAccuracyLabel);
             this.TestDonePanel.Controls.Add(this.WrongCorrectCountLabel);
@@ -251,6 +255,16 @@ namespace Form_Ver
             this.TimeTakenLabel.Text = "Time Taken: ";
             this.TimeTakenLabel.Click += new System.EventHandler(this.TimeTakenLabel_Click);
             // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ScoreLabel.Location = new System.Drawing.Point(17, 281);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(85, 32);
+            this.ScoreLabel.TabIndex = 7;
+            this.ScoreLabel.Text = "Score: ";
+            // 
             // IntroLabel
             // 
             this.IntroLabel.AutoSize = true;
@@ -274,6 +288,16 @@ namespace Form_Ver
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ScoreResultLabel
+            // 
+            this.ScoreResultLabel.AutoSize = true;
+            this.ScoreResultLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ScoreResultLabel.Location = new System.Drawing.Point(17, 351);
+            this.ScoreResultLabel.Name = "ScoreResultLabel";
+            this.ScoreResultLabel.Size = new System.Drawing.Size(132, 32);
+            this.ScoreResultLabel.TabIndex = 6;
+            this.ScoreResultLabel.Text = "Your Score:";
             // 
             // TestsForm
             // 
@@ -318,5 +342,7 @@ namespace Form_Ver
         private System.Windows.Forms.Label AnswerCorrectCountLabel;
         private System.Windows.Forms.Label AnswerAccuracyLabel;
         private System.Windows.Forms.Label MistakeTrackerLabel;
+        private System.Windows.Forms.Label ScoreLabel;
+        private System.Windows.Forms.Label ScoreResultLabel;
     }
 }

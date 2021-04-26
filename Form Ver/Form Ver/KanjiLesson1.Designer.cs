@@ -570,9 +570,9 @@ namespace Form_Ver
             // 
             this.KanjiLesson1Panel18SpeedTestButton.Location = new System.Drawing.Point(560, 260);
             this.KanjiLesson1Panel18SpeedTestButton.Name = "KanjiLesson1Panel18SpeedTestButton";
-            this.KanjiLesson1Panel18SpeedTestButton.Size = new System.Drawing.Size(90, 33);
+            this.KanjiLesson1Panel18SpeedTestButton.Size = new System.Drawing.Size(93, 42);
             this.KanjiLesson1Panel18SpeedTestButton.TabIndex = 5;
-            this.KanjiLesson1Panel18SpeedTestButton.Text = "Start";
+            this.KanjiLesson1Panel18SpeedTestButton.Text = "NOT FINISHED";
             this.KanjiLesson1Panel18SpeedTestButton.UseVisualStyleBackColor = true;
             this.KanjiLesson1Panel18SpeedTestButton.Click += new System.EventHandler(this.KanjiLesson1Panel18SpeedTestButton_Click);
             // 
@@ -1687,7 +1687,7 @@ namespace Form_Ver
     "y have many meaning and ways to pronunciation.";
             this.KanjiLesson1Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // KanjiMenu
+            // KanjiLesson1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1703,7 +1703,7 @@ namespace Form_Ver
             this.Controls.Add(this.KanjiMenuLabel1);
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
-            this.Name = "KanjiMenu";
+            this.Name = "KanjiLesson1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KanjiMenu_FormClosed);
             this.KanjiLesson1Panel.ResumeLayout(false);
