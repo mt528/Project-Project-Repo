@@ -50,9 +50,9 @@ namespace Form_Ver
             this.ClassTestLabel = new System.Windows.Forms.Label();
             this.ClassTestButton = new System.Windows.Forms.Button();
             this.TestModePanel = new System.Windows.Forms.Panel();
-            this.ShortTestButton = new System.Windows.Forms.Button();
-            this.FullTestButton = new System.Windows.Forms.Button();
             this.TestModeLabel = new System.Windows.Forms.Label();
+            this.FullTestButton = new System.Windows.Forms.Button();
+            this.ShortTestButton = new System.Windows.Forms.Button();
             this.TestModePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,7 +192,7 @@ namespace Form_Ver
             this.Lesson2Button.Name = "Lesson2Button";
             this.Lesson2Button.Size = new System.Drawing.Size(115, 28);
             this.Lesson2Button.TabIndex = 13;
-            this.Lesson2Button.Text = "Start";
+            this.Lesson2Button.Text = "No Finished";
             this.Lesson2Button.UseVisualStyleBackColor = true;
             this.Lesson2Button.Click += new System.EventHandler(this.Lesson2Button_Click);
             // 
@@ -202,7 +202,7 @@ namespace Form_Ver
             this.Lesson3Button.Name = "Lesson3Button";
             this.Lesson3Button.Size = new System.Drawing.Size(115, 28);
             this.Lesson3Button.TabIndex = 14;
-            this.Lesson3Button.Text = "Start";
+            this.Lesson3Button.Text = "Not Finished";
             this.Lesson3Button.UseVisualStyleBackColor = true;
             this.Lesson3Button.Click += new System.EventHandler(this.Lesson3Button_Click);
             // 
@@ -212,7 +212,7 @@ namespace Form_Ver
             this.Lesson4Button.Name = "Lesson4Button";
             this.Lesson4Button.Size = new System.Drawing.Size(115, 28);
             this.Lesson4Button.TabIndex = 15;
-            this.Lesson4Button.Text = "Start";
+            this.Lesson4Button.Text = "Not Finished";
             this.Lesson4Button.UseVisualStyleBackColor = true;
             this.Lesson4Button.Click += new System.EventHandler(this.Lesson4Button_Click);
             // 
@@ -222,7 +222,7 @@ namespace Form_Ver
             this.Lesson5Button.Name = "Lesson5Button";
             this.Lesson5Button.Size = new System.Drawing.Size(115, 28);
             this.Lesson5Button.TabIndex = 16;
-            this.Lesson5Button.Text = "Start";
+            this.Lesson5Button.Text = "Not Finished";
             this.Lesson5Button.UseVisualStyleBackColor = true;
             this.Lesson5Button.Click += new System.EventHandler(this.Lesson5Button_Click);
             // 
@@ -232,7 +232,7 @@ namespace Form_Ver
             this.Lesson6Button.Name = "Lesson6Button";
             this.Lesson6Button.Size = new System.Drawing.Size(115, 28);
             this.Lesson6Button.TabIndex = 17;
-            this.Lesson6Button.Text = "Start";
+            this.Lesson6Button.Text = "Not Finished";
             this.Lesson6Button.UseVisualStyleBackColor = true;
             this.Lesson6Button.Click += new System.EventHandler(this.Lesson6Button_Click);
             // 
@@ -242,7 +242,7 @@ namespace Form_Ver
             this.Lesson7Button.Name = "Lesson7Button";
             this.Lesson7Button.Size = new System.Drawing.Size(115, 28);
             this.Lesson7Button.TabIndex = 18;
-            this.Lesson7Button.Text = "Start";
+            this.Lesson7Button.Text = "Not Finished";
             this.Lesson7Button.UseVisualStyleBackColor = true;
             this.Lesson7Button.Click += new System.EventHandler(this.Lesson7Button_Click);
             // 
@@ -252,7 +252,7 @@ namespace Form_Ver
             this.Lesson8Button.Name = "Lesson8Button";
             this.Lesson8Button.Size = new System.Drawing.Size(115, 28);
             this.Lesson8Button.TabIndex = 19;
-            this.Lesson8Button.Text = "Start";
+            this.Lesson8Button.Text = "Not Finished";
             this.Lesson8Button.UseVisualStyleBackColor = true;
             this.Lesson8Button.Click += new System.EventHandler(this.Lesson8Button_Click);
             // 
@@ -289,26 +289,6 @@ namespace Form_Ver
             this.TestModePanel.Size = new System.Drawing.Size(800, 450);
             this.TestModePanel.TabIndex = 22;
             // 
-            // ShortTestButton
-            // 
-            this.ShortTestButton.Location = new System.Drawing.Point(158, 310);
-            this.ShortTestButton.Name = "ShortTestButton";
-            this.ShortTestButton.Size = new System.Drawing.Size(144, 43);
-            this.ShortTestButton.TabIndex = 0;
-            this.ShortTestButton.Text = "Short";
-            this.ShortTestButton.UseVisualStyleBackColor = true;
-            this.ShortTestButton.Click += new System.EventHandler(this.ShortTestButton_Click);
-            // 
-            // FullTestButton
-            // 
-            this.FullTestButton.Location = new System.Drawing.Point(478, 310);
-            this.FullTestButton.Name = "FullTestButton";
-            this.FullTestButton.Size = new System.Drawing.Size(144, 43);
-            this.FullTestButton.TabIndex = 1;
-            this.FullTestButton.Text = "Full";
-            this.FullTestButton.UseVisualStyleBackColor = true;
-            this.FullTestButton.Click += new System.EventHandler(this.FullTestButton_Click);
-            // 
             // TestModeLabel
             // 
             this.TestModeLabel.AutoSize = true;
@@ -320,6 +300,26 @@ namespace Form_Ver
             this.TestModeLabel.Text = "What type of test do you want to do?\r\n\r\nFull test: All possible Hiragana will be " +
     "tested\r\nShort: The Hiragana symbols will be tested without the combinations";
             this.TestModeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FullTestButton
+            // 
+            this.FullTestButton.Location = new System.Drawing.Point(478, 310);
+            this.FullTestButton.Name = "FullTestButton";
+            this.FullTestButton.Size = new System.Drawing.Size(144, 43);
+            this.FullTestButton.TabIndex = 1;
+            this.FullTestButton.Text = "Full";
+            this.FullTestButton.UseVisualStyleBackColor = true;
+            this.FullTestButton.Click += new System.EventHandler(this.FullTestButton_Click);
+            // 
+            // ShortTestButton
+            // 
+            this.ShortTestButton.Location = new System.Drawing.Point(158, 310);
+            this.ShortTestButton.Name = "ShortTestButton";
+            this.ShortTestButton.Size = new System.Drawing.Size(144, 43);
+            this.ShortTestButton.TabIndex = 0;
+            this.ShortTestButton.Text = "Short";
+            this.ShortTestButton.UseVisualStyleBackColor = true;
+            this.ShortTestButton.Click += new System.EventHandler(this.ShortTestButton_Click);
             // 
             // HiraganaMenu
             // 
