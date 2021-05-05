@@ -14,6 +14,7 @@ namespace Form_Ver
         {
             InitializeComponent();
             JapanesePanel.Hide(); // To hide the panel at the begining
+            
         }
 
         private void MainMenuForm_Load(object sender, EventArgs e)
@@ -32,10 +33,10 @@ namespace Form_Ver
             Application.Exit(); // Closes the programme 
         }
 
-        
-        //-------------------------------------------------------------------
-        //-------------------------------------------------------------------
 
+        //-------------------------------------------------------------------
+        //-------------------------------------------------------------------
+        #region Japanese
         private void JapaneseButton_Click(object sender, EventArgs e)
         {
             JapanesePanel.Show();
@@ -86,10 +87,24 @@ namespace Form_Ver
             Kanji.Show();
         }
 
+
         #endregion
         //-------------------------------------------------------------------
         #endregion
+        #endregion
 
-        
+        #region Bulgarian
+       
+        private void BulgarianButton_Click(object sender, EventArgs e)
+        {
+            Bulgarian BulgarianForm = new Bulgarian();
+            this.Hide();
+            BulgarianForm.Show();
+
+
+        }
+
+        #endregion
+
     }
 }

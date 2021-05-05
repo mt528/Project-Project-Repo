@@ -41,6 +41,8 @@ namespace Form_Ver
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.Panel5 = new System.Windows.Forms.Panel();
+            this.Panel5Label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.Panel5LessonMenuButton = new System.Windows.Forms.Button();
             this.Panel5Label4 = new System.Windows.Forms.Label();
             this.Panel5Label3 = new System.Windows.Forms.Label();
@@ -68,9 +70,6 @@ namespace Form_Ver
             this.Panel1Label1 = new System.Windows.Forms.Label();
             this.Panel1NextButton = new System.Windows.Forms.Button();
             this.Panel1BackButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Panel5Label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
@@ -207,7 +206,6 @@ namespace Form_Ver
             // 
             // Panel5
             // 
-            this.Panel5.Controls.Add(this.label1);
             this.Panel5.Controls.Add(this.Panel5Label5);
             this.Panel5.Controls.Add(this.button1);
             this.Panel5.Controls.Add(this.Panel5LessonMenuButton);
@@ -221,6 +219,27 @@ namespace Form_Ver
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(801, 453);
             this.Panel5.TabIndex = 12;
+            // 
+            // Panel5Label5
+            // 
+            this.Panel5Label5.AutoSize = true;
+            this.Panel5Label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel5Label5.Location = new System.Drawing.Point(334, 263);
+            this.Panel5Label5.Name = "Panel5Label5";
+            this.Panel5Label5.Size = new System.Drawing.Size(136, 32);
+            this.Panel5Label5.TabIndex = 12;
+            this.Panel5Label5.Text = "Choice Test";
+            this.Panel5Label5.Click += new System.EventHandler(this.Panel5Label5_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(351, 308);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 32);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Start";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Panel5LessonMenuButton
             // 
@@ -514,37 +533,6 @@ namespace Form_Ver
             this.Panel1BackButton.UseVisualStyleBackColor = true;
             this.Panel1BackButton.Click += new System.EventHandler(this.Panel1BackButton_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(351, 308);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 32);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Panel5Label5
-            // 
-            this.Panel5Label5.AutoSize = true;
-            this.Panel5Label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel5Label5.Location = new System.Drawing.Point(334, 263);
-            this.Panel5Label5.Name = "Panel5Label5";
-            this.Panel5Label5.Size = new System.Drawing.Size(136, 32);
-            this.Panel5Label5.TabIndex = 12;
-            this.Panel5Label5.Text = "Choice Test";
-            this.Panel5Label5.Click += new System.EventHandler(this.Panel5Label5_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(308, 343);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 64);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "NOT DONE\r\nDELETE WHEN DONE";
-            // 
             // HiraganaLesson1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -620,7 +608,6 @@ namespace Form_Ver
         private System.Windows.Forms.Label Panel5Label1;
         private System.Windows.Forms.Button Panel5TestButton;
         private System.Windows.Forms.Button Panel5BackButton;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Panel5Label5;
         private System.Windows.Forms.Button button1;
     }

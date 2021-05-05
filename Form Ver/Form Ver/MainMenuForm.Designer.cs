@@ -34,6 +34,7 @@ namespace Form_Ver
             this.JapaneseLabel = new System.Windows.Forms.Label();
             this.JapaneseButton = new System.Windows.Forms.Button();
             this.JapanesePanel = new System.Windows.Forms.Panel();
+            this.GoBackButton = new System.Windows.Forms.Button();
             this.KanjiButton = new System.Windows.Forms.Button();
             this.KanjiLabel = new System.Windows.Forms.Label();
             this.ComingSoonLabel1 = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@ namespace Form_Ver
             this.HiraganaLabel = new System.Windows.Forms.Label();
             this.JapaneseLabel2 = new System.Windows.Forms.Label();
             this.JapaneseLabel1 = new System.Windows.Forms.Label();
-            this.GoBackButton = new System.Windows.Forms.Button();
+            this.BulgarianButton = new System.Windows.Forms.Button();
             this.JapanesePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,9 +63,9 @@ namespace Form_Ver
             this.MoreComingLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MoreComingLabel.Location = new System.Drawing.Point(487, 259);
             this.MoreComingLabel.Name = "MoreComingLabel";
-            this.MoreComingLabel.Size = new System.Drawing.Size(169, 32);
+            this.MoreComingLabel.Size = new System.Drawing.Size(114, 32);
             this.MoreComingLabel.TabIndex = 1;
-            this.MoreComingLabel.Text = "More Coming!";
+            this.MoreComingLabel.Text = "Bulgarian";
             // 
             // JapaneseLabel
             // 
@@ -98,13 +99,24 @@ namespace Form_Ver
             this.JapanesePanel.Controls.Add(this.HiraganaLabel);
             this.JapanesePanel.Controls.Add(this.JapaneseLabel2);
             this.JapanesePanel.Controls.Add(this.JapaneseLabel1);
-            this.JapanesePanel.Location = new System.Drawing.Point(-1, -1);
+            this.JapanesePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.JapanesePanel.Location = new System.Drawing.Point(0, 0);
             this.JapanesePanel.MaximumSize = new System.Drawing.Size(816, 489);
             this.JapanesePanel.MinimumSize = new System.Drawing.Size(816, 489);
             this.JapanesePanel.Name = "JapanesePanel";
             this.JapanesePanel.Size = new System.Drawing.Size(816, 489);
             this.JapanesePanel.TabIndex = 4;
             this.JapanesePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.JapanesePanel_Paint);
+            // 
+            // GoBackButton
+            // 
+            this.GoBackButton.Location = new System.Drawing.Point(24, 397);
+            this.GoBackButton.Name = "GoBackButton";
+            this.GoBackButton.Size = new System.Drawing.Size(131, 42);
+            this.GoBackButton.TabIndex = 9;
+            this.GoBackButton.Text = "Go Back";
+            this.GoBackButton.UseVisualStyleBackColor = true;
+            this.GoBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
             // KanjiButton
             // 
@@ -186,15 +198,16 @@ namespace Form_Ver
             this.JapaneseLabel1.TabIndex = 0;
             this.JapaneseLabel1.Text = "With Japanese there are different writting systems.";
             // 
-            // GoBackButton
+            // BulgarianButton
             // 
-            this.GoBackButton.Location = new System.Drawing.Point(24, 397);
-            this.GoBackButton.Name = "GoBackButton";
-            this.GoBackButton.Size = new System.Drawing.Size(131, 42);
-            this.GoBackButton.TabIndex = 9;
-            this.GoBackButton.Text = "Go Back";
-            this.GoBackButton.UseVisualStyleBackColor = true;
-            this.GoBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
+            this.BulgarianButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BulgarianButton.Location = new System.Drawing.Point(472, 310);
+            this.BulgarianButton.Name = "BulgarianButton";
+            this.BulgarianButton.Size = new System.Drawing.Size(158, 52);
+            this.BulgarianButton.TabIndex = 5;
+            this.BulgarianButton.Text = "Start Learning!";
+            this.BulgarianButton.UseVisualStyleBackColor = true;
+            this.BulgarianButton.Click += new System.EventHandler(this.BulgarianButton_Click);
             // 
             // MainMenuForm
             // 
@@ -206,6 +219,7 @@ namespace Form_Ver
             this.Controls.Add(this.JapaneseLabel);
             this.Controls.Add(this.MoreComingLabel);
             this.Controls.Add(this.MainMenuText);
+            this.Controls.Add(this.BulgarianButton);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "MainMenuForm";
             this.Text = "MainMenuForm";
@@ -234,5 +248,6 @@ namespace Form_Ver
         private System.Windows.Forms.Label JapaneseLabel1;
         private System.Windows.Forms.Button KanjiButton;
         private System.Windows.Forms.Button GoBackButton;
+        private System.Windows.Forms.Button BulgarianButton;
     }
 }
