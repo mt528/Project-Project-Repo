@@ -40,6 +40,7 @@ namespace Form_Ver
             this.BulgarianInputTextBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BulgarianInputTextBox.ForeColor = System.Drawing.SystemColors.Menu;
             this.BulgarianInputTextBox.Location = new System.Drawing.Point(431, 393);
+            this.BulgarianInputTextBox.Multiline = false;
             this.BulgarianInputTextBox.Name = "BulgarianInputTextBox";
             this.BulgarianInputTextBox.Size = new System.Drawing.Size(357, 43);
             this.BulgarianInputTextBox.TabIndex = 12;
