@@ -163,86 +163,69 @@ namespace Form_Ver
                     Lesson1Stage = Lesson1Stage + 1;
                     break;
 
-                case 1:
-                    // Looking for user input
-                    if (TypedInfo.ToUpper() == "C") // Continue
-                    {
-                        BulgarianTextBox.Text += "\nLOOKING GOOD";
-                        Lesson1Stage = Lesson1Stage + 1;
-                        ScrollToBottom(); // Focuses the test box to the bottom
-                    }
-
-                    else if (TypedInfo.ToUpper() == "Q") // Quit lesson 1
-                    {
-                        ProgramStage = ProgramStage - 1; // Go back to main menu stage
-                    }
-
-                    else // Error
-                    {
-                        BulgarianTextBox.Text += "\nOops! Looks like the wrong information was entered";
-                    }
-
+                case 1: // Checking for continuation answer
+                    CheckContinueClass1();
+                    
                     break;
 
                 case 2:
+                    BulgarianTextBox.Text += "\n";
+                    //Console.WriteLine("\nThe second syllable we will cover is 'вей'.");
+                    BulgarianTextBox.Text += "\nThe second syllable we will cover is 'вей'.";
+                    // Console.WriteLine("\nThis vowel is pronunced as 'вей' ");
+                    BulgarianTextBox.Text += "\nThis vowel is pronunced as 'вей' ";
+                    //Console.WriteLine("This is wrote in latin as 'vei'");
+                    BulgarianTextBox.Text += "\nThis is wrote in latin as 'vei'";
+                    //Console.WriteLine("\nPlease write 'C' to continue or 'Q' to quit");
+                    BulgarianTextBox.Text += "\nPlease write 'C' to continue or 'Q' to quit";
+
+                    ScrollToBottom(); // Focuses the test box to the bottom
+
+                    Lesson1Stage = Lesson1Stage + 1;
+                    break;
+
+                case 3: // Checking answer
+                    CheckContinueClass1();
+                    
+                    break;
+
+                case 4:
+                    
+                    //Console.WriteLine("\nThe third syllable we will cover is 'те'.");
+                    BulgarianTextBox.Text += "\nThe third syllable we will cover is 'те'.";
+                    //Console.WriteLine("\nThis syllable is pronounced as 'те'.");
+                    BulgarianTextBox.Text += "\nThis syllable is pronounced as 'те'.";
+                    //Console.WriteLine("\nThis is wrote in Latin as 'te'.");
+                    BulgarianTextBox.Text += "\nThis is wrote in Latin as 'te'.";
+                    //Console.WriteLine("\nPlease write 'C' to continue or 'Q' to quit");
+                    BulgarianTextBox.Text += "\nPlease write 'C' to continue or 'Q' to quit";
+
+                    ScrollToBottom(); // Focuses the test box to the bottom
 
                     break;
 
+                case 5://Checking Answer
+                    CheckContinueClass1();
+                    break;
+
+                case 6:
+                    BulgarianTextBox.Text += "\nNow, are you read for a test?";
+                    ScrollToBottom(); // Focuses the test box to the bottom
+                    break;
+                    //----------------------------------------FINISH--------------------------------------
+                   // ----------------------------------------FINISH--------------------------------------
+                     //   ----------------------------------------FINISH--------------------------------------
+                    //    ----------------------------------------FINISH--------------------------------------
+                    //    ----------------------------------------FINISH--------------------------------------
+                case 7: //Check Answer ----------------------------------------FINISH--------------------------------------
+
+                    break;
             }
+
+
+
             
 
-
-            //    switch (UserInput)
-            //    {
-            //        case "C":
-            //            Loop = false; // To break the loop - Works
-            //            break;
-
-            //        case "Q":
-            //            return; // Should break out of the loop - Works
-            //            break;
-
-            //        default:
-            //            Console.WriteLine("Oops! Looks like the wrong infomation was entered!");
-            //            break;
-            //    }
-            //}
-            //Loop = true;
-
-            //while (Loop == true)
-            //{
-            //    Console.WriteLine("\nThe second syllable we will cover is 'вей'.");
-            //    Console.WriteLine("\nThis vowel is pronunced as 'вей' ");
-            //    Console.WriteLine("This is wrote in latin as 'vei'");
-            //    Console.WriteLine("\nPlease write 'C' to continue or 'Q' to quit");
-            //    UserInput = Console.ReadLine().ToUpper();
-            //    UserInput = UserInput.Substring(0, 1);
-
-            //    switch (UserInput)
-            //    {
-            //        case "C":
-            //            Loop = false;
-            //            break;
-
-            //        case "Q":
-            //            return;
-            //            break;
-
-            //        default:
-            //            Console.WriteLine("Oops! Looks like the wrong infomation was entered!");
-            //            break;
-            //    }
-            //}
-            //Loop = true;
-
-            //while (Loop == true)
-            //{
-            //    Console.WriteLine("\nThe third syllable we will cover is 'те'.");
-            //    Console.WriteLine("\nThis syllable is pronounced as 'те'.");
-            //    Console.WriteLine("\nThis is wrote in Latin as 'te'.");
-            //    Console.WriteLine("\nPlease write 'C' to continue or 'Q' to quit");
-            //    UserInput = Console.ReadLine().ToUpper();
-            //    UserInput = UserInput.Substring(0, 1);
 
             //    switch (UserInput)
             //    {
@@ -294,7 +277,33 @@ namespace Form_Ver
         }
         #endregion
 
+        #region Check if continue
+        void CheckContinueClass1()
+        {
+            // Looking for user input
+            if (TypedInfo.ToUpper() == "C") // Continue
+            {
+ 
+                Lesson1Stage = Lesson1Stage + 1;
+                ScrollToBottom(); // Focuses the test box to the bottom 
+                Class1();
+            }
+
+            else if (TypedInfo.ToUpper() == "Q") // Quit lesson 1
+            {
+                ProgramStage = ProgramStage - 1; // Go back to main menu stage
+                BulgarianMethod(UserEnterInfo, TypedInfo);
+            }
+
+            else // Error
+            {
+                BulgarianTextBox.Text += "\nOops! Looks like the wrong information was entered";
+            }
+        }
+        #endregion
+
         private void BulgarianInputTextBox_KeyDown(object sender, KeyEventArgs e)
+        
         {
             if (e.KeyData == Keys.Enter)
             {
@@ -322,9 +331,13 @@ namespace Form_Ver
 
                         switch (Lesson1Stage)
                         {
-                                case 1:
+                            case 1:
                                 Class1();
                                 break;
+                            case 3:
+                                Class1();
+                                break;
+
                         }
                         #endregion
   
