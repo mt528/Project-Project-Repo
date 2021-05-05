@@ -27,4 +27,6 @@ Kanji Lesson 1 Test has been fixed. I will need to finish the whole test for the
 test button now actually gives you a test. Right now the score system has been implamented for the hiragana tests, as of right now I have no plans to implament 
 this feature for the kanji tests (though it would be better if I did). - Matt 26/04/2021
 
-Changed the Hiragana Lesson 2 and onwards buttons don't work. Updated the buttons to show they are not finished. - 04/05/2021
+Changed the Hiragana Lesson 2 and onwards buttons don't work. Updated the buttons to show they are not finished. - Matt 04/05/2021
+
+Started adding kristiyans code to the project. - 05/05/2021 - Matt 05/05/2021
