@@ -22,14 +22,16 @@ namespace Form_Ver
             BulgarianMethod(UserEnterInfo, TypedInfo);
         }
 
-        
+        bool CorrectInfo = false;
 
         #region Kristiyan's Code
         public void BulgarianMethod(bool UserInfo, string TypedInfo)
         {
-            switch(ProgramStage)
+            
+            switch(ProgramStage) // Switch to determind what to do with inputs based on program stage
             {
-                case 0:
+                case 0: //  Beginging
+
                 //Console.WriteLine("We have broken the zdraveite intro 3 classes to make it easy to learn");
                 BulgarianTextBox.Text = "We have broken the zdraveite intro 3 classes to make it easy to learn";
                 //Console.WriteLine("Please select one to start learning");
@@ -41,11 +43,18 @@ namespace Form_Ver
 
                     break;
 
-                case 1:
-                    int UserLessonNumberSelected; // To store the lesson
+                case 1: // After the first lot of text is printed and user input has been done
+                    //int UserLessonNumberSelected; // To store the lesson
 
-                    if (Int32.TryParse(TypedInfo, out UserLessonNumberSelected) == true) // Error handling 
-                    {
+                    int NumberEntered = -1;
+
+                    Int32.TryParse(TypedInfo, out NumberEntered);
+
+                   // if (Int32.TryParse(TypedInfo, out UserLessonNumberSelected) == true)  not WORK
+                   if (NumberEntered != -1) // Error handling 
+                    { // Number was entered
+
+                        CorrectInfo = true; // So the text input text box does not do actions that happen when the input is correct
                         TypedInfo = TypedInfo.ToUpper();
                         TypedInfo = TypedInfo.Substring(0, 1);
 
@@ -54,15 +63,16 @@ namespace Form_Ver
 
                             switch (TypedInfo)
                             {
-                                case "1":
+                                case "1": // Lesson 1 
+                                    Lesson1Stage = 0; // To reset the Stage counter
                                     BulgarianTextBox.Text += "\nYou have selected Lesson 1";
                                     Class1();
                                     break;
 
-                                case "2":
+                                case "2":// Lesson 2
                                     break;
 
-                                case "3":
+                                case "3":// Lesson 3 
                                     break;
 
                                 default:
@@ -76,7 +86,11 @@ namespace Form_Ver
 
                     else
                     {
+                        
+                        ProgramStage = ProgramStage - 1; // So the program does not get stuck
+                        
                         BulgarianTextBox.Text += "\nOops! Looks like the wrong information was entered";
+                        ScrollToBottom();
                     }
                             
 
@@ -93,7 +107,7 @@ namespace Form_Ver
 
         public void Class1()
         {
-            
+            //
 
             Console.OutputEncoding = System.Text.Encoding.Unicode;
 
@@ -101,33 +115,7 @@ namespace Form_Ver
             {
                 case 0:
 
-                    #region Creating Lists
-                    List<string> FirstIterationQuestion = new List<string>();
-                    List<string> FirstIterationAnswer = new List<string>();
-
-                    List<string> SecondIterationQuestion = new List<string>();
-                    List<string> SecondIterationAnswer = new List<string>();
-
-
-
-
-                    List<string> CompletedIteration = new List<string>();
-
-                    #region Adding elements to the lists
-
-
-                    FirstIterationQuestion.Add("Здра");
-                    FirstIterationAnswer.Add("Zdra");
-
-                    FirstIterationQuestion.Add("вей");
-                    FirstIterationAnswer.Add("vei");
-
-                    FirstIterationQuestion.Add("те");
-                    FirstIterationAnswer.Add("te");
-
-                    #endregion
-                    #endregion
-
+                  
                     //Console.WriteLine("The way the answers will be done is that it will require you to enter the latin version of the letters");
                     BulgarianTextBox.Text += "\nThe way the answers will be done is that it will require you to enter the latin version of the letters";
                     //Console.WriteLine("Latin is a method for writing Bulgarian words/characters with English letters");
@@ -190,7 +178,8 @@ namespace Form_Ver
                     break;
 
                 case 4:
-                    
+
+                    BulgarianTextBox.Text += "\n";
                     //Console.WriteLine("\nThe third syllable we will cover is 'те'.");
                     BulgarianTextBox.Text += "\nThe third syllable we will cover is 'те'.";
                     //Console.WriteLine("\nThis syllable is pronounced as 'те'.");
@@ -201,7 +190,7 @@ namespace Form_Ver
                     BulgarianTextBox.Text += "\nPlease write 'C' to continue or 'Q' to quit";
 
                     ScrollToBottom(); // Focuses the test box to the bottom
-
+                    Lesson1Stage = Lesson1Stage + 1;     
                     break;
 
                 case 5://Checking Answer
@@ -209,43 +198,230 @@ namespace Form_Ver
                     break;
 
                 case 6:
+                    BulgarianTextBox.Text += "\n";
+                    BulgarianTextBox.Text += "\n";
                     BulgarianTextBox.Text += "\nNow, are you read for a test?";
+                    BulgarianTextBox.Text += "\nPlease write 'C' to continue or 'Q' to quit";
                     ScrollToBottom(); // Focuses the test box to the bottom
-                    break;
-                    //----------------------------------------FINISH--------------------------------------
-                   // ----------------------------------------FINISH--------------------------------------
-                     //   ----------------------------------------FINISH--------------------------------------
-                    //    ----------------------------------------FINISH--------------------------------------
-                    //    ----------------------------------------FINISH--------------------------------------
-                case 7: //Check Answer ----------------------------------------FINISH--------------------------------------
 
+                    Lesson1Stage += 1;
+                    break;
+                    
+                case 7: 
+                    CheckContinueClass1();
+                    break;
+
+                case 8:
+                    BulgarianTextBox.Text += "\n"; //To skip a line 
+                    BulgarianTextBox.Text += "\nStarting Class 1 Test";
+                    ScrollToBottom();
+                    Class1Test();
+                    Lesson1Stage = 9; // so the test can repeat
+                    break;
+
+                case 9:
+                    Class1Test();
                     break;
             }
 
-
-
-            
-
-
-            //    switch (UserInput)
-            //    {
-            //        case "C":
-            //            Loop = false;
-            //            break;
-
-            //        case "Q":
-            //            return;
-            //            break;
-
-            //        default:
-            //            Console.WriteLine("Oops! Looks like the wrong information was entered!");
-            //            break;
-            //    }
-            //}
-            //Loop = true;
+          
         }
+
         #endregion
 
+        #region Class 1 Test
+        bool TestStarting = true;
+        List<string> FirstIterationQuestion = new List<string>();
+        List<string> FirstIterationAnswer = new List<string>();
+
+        List<string> SecondIterationQuestion = new List<string>();
+        List<string> SecondIterationAnswer = new List<string>();
+
+
+        List<string> CompletedIteration = new List<string>();
+
+
+        int RandomIndex = -1;
+
+        void Class1Test()
+        {
+           
+            if (TestStarting == true) // So the construction of data is done once
+            {
+                #region add content to the list
+                
+
+                FirstIterationQuestion.Add("Здра");
+                FirstIterationAnswer.Add("Zdra");
+
+                FirstIterationQuestion.Add("вей");
+                FirstIterationAnswer.Add("vei");
+
+                FirstIterationQuestion.Add("те");
+                FirstIterationAnswer.Add("te");
+                #endregion 
+                TestStarting = false; // It doesnt repeat
+                
+            }
+            Random RandomIndexGen = new Random();
+            int ListCount;
+
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+
+                
+            ListCount = FirstIterationQuestion.Count;
+            #region First Iteration of lists
+            #region Make Quesiton (First Time)
+            if (ListCount > 0 && RandomIndex == -1) // Making the quesiton
+            {
+                RandomIndex = RandomIndexGen.Next(0, ListCount);
+
+                //Console.WriteLine("What is this character,{0}?", FirstIterationQuestion[RandomIndex]);
+                BulgarianTextBox.Text += $"\n"; 
+                BulgarianTextBox.Text += $"\n"; 
+                BulgarianTextBox.Text += $"\nWhat is this character, {FirstIterationQuestion[RandomIndex]}?"; // Works
+                ScrollToBottom();
+            }
+            #endregion
+
+            #region Check Answer
+            else if (ListCount > 0 && RandomIndex != -1) // Checking the answer
+            {
+                if (TypedInfo == FirstIterationAnswer[RandomIndex]) // Correct answer
+                {
+                    BulgarianTextBox.Text += "\n Correct";
+                    ScrollToBottom();
+
+                    // remove the quesiton and answer that was correct
+                    FirstIterationQuestion.RemoveAt(RandomIndex);
+                    FirstIterationAnswer.RemoveAt(RandomIndex);
+                    RandomIndex = -1; // To allow the program to generate a new question
+                }
+
+                else // Wrong answer
+                {
+                    BulgarianTextBox.Text += "\n Wrong";
+                    ScrollToBottom();
+                    RandomIndex = -1; // To allow the program to generate a new question
+                }
+
+                //------------------------------------------------------------------------------------------------
+                //------------------------------------------------------------------------------------------------
+                //------------------------------------------------------------------------------------------------
+
+                if (FirstIterationQuestion.Count > 0) // More question are needed
+                {
+                    Class1Test();
+                }
+
+                else // When the test is done
+                {
+                    
+                    ScrollToBottom();
+
+                    ProgramStage = 0; // To take the user to the main menu
+                    TypedInfo = "";
+
+                    BulgarianTextBox.Text += "\n You have finished the test!";
+
+                    BulgarianMethod(UserEnterInfo, TypedInfo);
+                }
+            }
+            #endregion
+
+
+            #endregion
+
+            //string UserInput = Console.ReadLine().ToUpper();
+
+
+            //if (FirstIterationAnswer[RandomIndex] == UserInput)
+            //{
+            //    Console.WriteLine("Well done!");
+            //    SecondIterationQuestion.Add(FirstIterationQuestion[RandomIndex]);
+            //    SecondIterationAnswer.Add(FirstIterationAnswer[RandomIndex]);
+
+            //    FirstIterationQuestion.RemoveAt(RandomIndex);
+            //    FirstIterationAnswer.RemoveAt(RandomIndex);
+            //}
+
+            //else if (FirstIterationAnswer[RandomIndex] != UserInput)
+            //{
+            //    Console.WriteLine("Incorrect, try again!");
+            //}
+
+            //else
+            //{
+            //    Console.WriteLine("The first iteration answer section has gone wrong - Bug");
+            //}
+
+
+
+
+
+            //else if (ListCount == 0)
+            //{
+            //    Console.WriteLine("You got them all right, now do it again!");
+            //    while (ListElementLoop == true)
+            //    {
+            //        ListCount = SecondIterationQuestion.Count;
+
+            //        if (ListCount > 0)
+            //        {
+            //            RandomIndex = RandomIndexGen.Next(0, ListCount);
+
+            //            Console.WriteLine("What is this character,{0}?", SecondIterationQuestion[RandomIndex]);
+
+            //            string UserInput = Console.ReadLine().ToUpper();
+
+
+            //            if (SecondIterationAnswer[RandomIndex] == UserInput)
+            //            {
+            //                Console.WriteLine("Well done!");
+            //                CompletedIteration.Add(SecondIterationQuestion[RandomIndex]);
+            //                CompletedIteration.Add(SecondIterationAnswer[RandomIndex]);
+
+            //                /// Then remove the question and answer character from the current list
+            //                SecondIterationQuestion.RemoveAt(RandomIndex);
+            //                SecondIterationAnswer.RemoveAt(RandomIndex);
+            //            }
+            //            //---------------------------------------------------------------------------------
+            //            /// Got the answer wrong
+            //            else if (SecondIterationAnswer[RandomIndex] != UserInput)
+            //            {
+            //                Console.WriteLine("Incorrect, try again!");
+            //            }
+
+            //            //---------------------------------------------------------------------------------
+            //            /// Error Condition
+            //            else
+            //            {
+            //                Console.WriteLine("The second iteration answer section has gone wrong - Bug");
+            //            }
+
+
+
+            //        }
+            //        else if (ListCount == 0)
+            //        {
+            //            Console.WriteLine("Well Done, you finished the test!");
+            //            return;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("The second iteration list shuffle has gone wrong!! - bug");
+            //        }
+
+
+            //    }
+            //    return;
+
+
+            //}
+
+        }
+
+        #endregion
 
         #region Go Back Button
         /// <summary>
@@ -291,34 +467,44 @@ namespace Form_Ver
 
             else if (TypedInfo.ToUpper() == "Q") // Quit lesson 1
             {
-                ProgramStage = ProgramStage - 1; // Go back to main menu stage
+                // Go back to main menu stage
+                ProgramStage = 0; // To take the user to the main menu
+                TypedInfo = "";
+
+
                 BulgarianMethod(UserEnterInfo, TypedInfo);
             }
 
             else // Error
             {
                 BulgarianTextBox.Text += "\nOops! Looks like the wrong information was entered";
+                ScrollToBottom();
             }
         }
         #endregion
 
+        #region User Inputs
         private void BulgarianInputTextBox_KeyDown(object sender, KeyEventArgs e)
         
         {
             if (e.KeyData == Keys.Enter)
             {
-                switch (ProgramStage)
+                switch (ProgramStage) // Switch to determind what to do with inputs based on program stage
                 {
-                    case 0: // Stage 0
+                    case 0: // Stage 0 - At begining
+
+                        
                         UserEnterInfo = true;
 
                         TypedInfo = BulgarianInputTextBox.Text;
                         TypedInfo = TypedInfo.ToString();
 
-                        ProgramStage = 1; // Next stage
-                        BulgarianMethod(UserEnterInfo, TypedInfo);
-                        BulgarianInputTextBox.Text = ""; // Clean
-
+                       // if (CorrectInfo == true) // To avoid errors if the user eneter WRONG info
+                      //  {
+                            ProgramStage = 1; // Next stage
+                            BulgarianMethod(UserEnterInfo, TypedInfo);
+                            BulgarianInputTextBox.Text = ""; // Clean
+                       // }
 
                         break;
 
@@ -338,6 +524,26 @@ namespace Form_Ver
                                 Class1();
                                 break;
 
+                            case 4:
+                                Class1();
+                                break;
+                            case 5:
+                                Class1();
+                                
+                                break;
+                            case 6:
+                                
+                                Class1();
+                                break;
+                            case 7:
+                                Class1();
+                                
+                                break;
+
+                            case 9:
+                                Class1Test();
+                                break;
+
                         }
                         #endregion
   
@@ -348,6 +554,8 @@ namespace Form_Ver
             }
 
         }
+
+        #endregion
 
     }
 }
