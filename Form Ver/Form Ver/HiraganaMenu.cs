@@ -83,9 +83,16 @@ namespace Form_Ver
 
         }
 
-        private void Lesson2Button_Click(object sender, EventArgs e)
+        /// <summary>
+        /// This will hide the current form and show the lesson 2 form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Lesson2Button_Click(object sender, EventArgs e) // Lesson 2 Button
         {
-
+            HiraganaLesson2 Lesson2 = new HiraganaLesson2(); // Initalising the new form 
+            this.Hide(); // Hide the current form
+            Lesson2.Show(); // Show the new form 
         }
         #endregion
 

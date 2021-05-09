@@ -82,6 +82,9 @@ namespace Form_Ver
         public static int TimerValue;
         //-------------------------------------------------------------------------------------
         #region Mistake Tracker
+
+        public static bool UserCameFromLesson = false; // This is so the lessons test dont cause crashes
+
         // To store the lesson content 
         public static List<string> Lesson1Ref = new List<string>();
         public static List<string> Lesson2Ref = new List<string>();

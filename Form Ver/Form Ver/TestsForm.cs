@@ -298,60 +298,96 @@ namespace Form_Ver
                     Lesson1QuestionContent(Program.Lesson1Questions);// Adding content to the list
 
                     Questions = Program.Lesson1Questions;
+
+                    //------------------------------------------------------------------------------------------------------
+                    Program.UserCameFromLesson = true; // So the mistrake tracker will only run if this is true - To avoid crashes
+                    MistakeTrackerLabel.Hide(); // As this feature will not be used
                     break;
 
                 case ("L2"):
                     Lesson2QuestionContent(Program.Lesson2Questions);// Adding content to the list
 
                     Questions = Program.Lesson2Questions;
+
+                    //------------------------------------------------------------------------------------------------------
+                    Program.UserCameFromLesson = true; // So the mistrake tracker will only run if this is true - To avoid crashes
+                    MistakeTrackerLabel.Hide(); // As this feature will not be used
                     break;
 
                 case ("L3"):
                     Lesson3QuestionContent(Program.Lesson3Questions);// Adding content to the list
 
                     Questions = Program.Lesson3Questions;
+
+                    //------------------------------------------------------------------------------------------------------
+                    Program.UserCameFromLesson = true; // So the mistrake tracker will only run if this is true - To avoid crashes
+                    MistakeTrackerLabel.Hide(); // As this feature will not be used
                     break;
 
                 case ("L4"):
                     Lesson4QuestionContent(Program.Lesson4Questions);// Adding content to the list
 
                     Questions = Program.Lesson4Questions;
+
+                    //------------------------------------------------------------------------------------------------------
+                    Program.UserCameFromLesson = true; // So the mistrake tracker will only run if this is true - To avoid crashes
+                    MistakeTrackerLabel.Hide(); // As this feature will not be used
                     break;
 
                 case ("L5"):
                     Lesson5QuestionContent(Program.Lesson5Questions);// Adding content to the list
 
                     Questions = Program.Lesson5Questions;
+
+                    //------------------------------------------------------------------------------------------------------
+                    Program.UserCameFromLesson = true; // So the mistrake tracker will only run if this is true - To avoid crashes
+                    MistakeTrackerLabel.Hide(); // As this feature will not be used
                     break;
 
                 case ("L6"):
                     Lesson6QuestionContent(Program.Lesson6Questions);// Adding content to the list
 
                     Questions = Program.Lesson6Questions;
+
+                    //------------------------------------------------------------------------------------------------------
+                    Program.UserCameFromLesson = true; // So the mistrake tracker will only run if this is true - To avoid crashes
+                    MistakeTrackerLabel.Hide(); // As this feature will not be used
                     break;
 
                 case ("L7"):
                     Lesson7QuestionContent(Program.Lesson7Questions);// Adding content to the list
 
                     Questions = Program.Lesson7Questions;
+
+                    //------------------------------------------------------------------------------------------------------
+                    Program.UserCameFromLesson = true; // So the mistrake tracker will only run if this is true - To avoid crashes
+                    MistakeTrackerLabel.Hide(); // As this feature will not be used
                     break;
 
                 case ("L8"):
                     Lesson8QuestionContent(Program.Lesson8Questions);// Adding content to the list
 
                     Questions = Program.Lesson8Questions;
+
+                    //------------------------------------------------------------------------------------------------------
+                    Program.UserCameFromLesson = true; // So the mistrake tracker will only run if this is true - To avoid crashes
+                    MistakeTrackerLabel.Hide(); // As this feature will not be used
                     break;
 
                 case ("TEST"):
                     TestQuestionContent(Program.TestQuestions);// Adding content to the list
 
                     Questions = Program.TestQuestions;
+
+                    Program.UserCameFromLesson = false; // So the mistrake tracker will only run if this is true - To avoid crashes
                     break;
 
                 case ("TESTshort"):
                     TestShortQuestionContent(Program.TestQuestions);// Adding content to the list
 
                     Questions = Program.TestQuestions;
+
+                    Program.UserCameFromLesson = false; // So the mistrake tracker will only run if this is true - To avoid crashes
                     break;
             }
             return Questions;
@@ -1007,7 +1043,11 @@ namespace Form_Ver
             else // Wrong
             {
                 ScoreGiver(false);
-                MistakeTracker(Program.Answers[Program.IndexInUse]); // Mistake tracker method
+
+                if (Program.UserCameFromLesson == false) // This method will run if a whole test is being done
+                {
+                    MistakeTracker(Program.Answers[Program.IndexInUse]); // Mistake tracker method
+                }
                 return false; 
             }
         }
@@ -1222,8 +1262,13 @@ namespace Form_Ver
 
             ScoreResultLabel.Text = "Score: " + Program.Score.ToString(); // Print the score to the label at the end of the test 
 
-            // Formating the weak areas label with the correct text and data
-            MistakeTrackerLabel.Text = "Lesson Content Wrong:" + "\nLesson 1: " + Program.L1Incorrect.ToString() + "\nLesson 2: " + Program.L2Incorrect.ToString() + "\nLesson 3: " + Program.L3Incorrect.ToString() + "\nLesson 4: " + Program.L4Incorrect.ToString() + "\nLesson 5: " + Program.L5Incorrect.ToString() + "\nLesson 6: " + Program.L6Incorrect.ToString() + "\nLesson 7: " + Program.L7Incorrect.ToString() + "\nLesson 8: " + Program.L8Incorrect.ToString();
+
+            //----------------------------------------------------------------------------------------------------------------------------------
+            if (Program.UserCameFromLesson == false) // This method will run if a whole test is being done
+            {
+                // Formating the weak areas label with the correct text and data
+                MistakeTrackerLabel.Text = "Lesson Content Wrong:" + "\nLesson 1: " + Program.L1Incorrect.ToString() + "\nLesson 2: " + Program.L2Incorrect.ToString() + "\nLesson 3: " + Program.L3Incorrect.ToString() + "\nLesson 4: " + Program.L4Incorrect.ToString() + "\nLesson 5: " + Program.L5Incorrect.ToString() + "\nLesson 6: " + Program.L6Incorrect.ToString() + "\nLesson 7: " + Program.L7Incorrect.ToString() + "\nLesson 8: " + Program.L8Incorrect.ToString();
+            }
         }
 
         #endregion
