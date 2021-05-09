@@ -40,6 +40,14 @@ namespace Form_Ver
             this.Panel9 = new System.Windows.Forms.Panel();
             this.Panel10 = new System.Windows.Forms.Panel();
             this.Panel11 = new System.Windows.Forms.Panel();
+            this.Panel12 = new System.Windows.Forms.Panel();
+            this.Panel12MenuButton = new System.Windows.Forms.Button();
+            this.Panel12MenuLabel = new System.Windows.Forms.Label();
+            this.Panel12SpeedTestLabel = new System.Windows.Forms.Label();
+            this.Panel12Label2 = new System.Windows.Forms.Label();
+            this.Panel12Label1 = new System.Windows.Forms.Label();
+            this.Panel12SpeedTestButton = new System.Windows.Forms.Button();
+            this.Panel12BackButton = new System.Windows.Forms.Button();
             this.Panel11Label3 = new System.Windows.Forms.Label();
             this.Panel11Label2 = new System.Windows.Forms.Label();
             this.Panel11Label1 = new System.Windows.Forms.Label();
@@ -94,14 +102,6 @@ namespace Form_Ver
             this.Panel1Label1 = new System.Windows.Forms.Label();
             this.Panel1NextButton = new System.Windows.Forms.Button();
             this.Panel1BackButton = new System.Windows.Forms.Button();
-            this.Panel12 = new System.Windows.Forms.Panel();
-            this.Panel12MenuButton = new System.Windows.Forms.Button();
-            this.Panel12MenuLabel = new System.Windows.Forms.Label();
-            this.Panel12SpeedTestLabel = new System.Windows.Forms.Label();
-            this.Panel12Label2 = new System.Windows.Forms.Label();
-            this.Panel12Label1 = new System.Windows.Forms.Label();
-            this.Panel12SpeedTestButton = new System.Windows.Forms.Button();
-            this.Panel12BackButton = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
@@ -268,6 +268,92 @@ namespace Form_Ver
             this.Panel11.Name = "Panel11";
             this.Panel11.Size = new System.Drawing.Size(800, 450);
             this.Panel11.TabIndex = 15;
+            // 
+            // Panel12
+            // 
+            this.Panel12.Controls.Add(this.Panel12MenuButton);
+            this.Panel12.Controls.Add(this.Panel12MenuLabel);
+            this.Panel12.Controls.Add(this.Panel12SpeedTestLabel);
+            this.Panel12.Controls.Add(this.Panel12Label2);
+            this.Panel12.Controls.Add(this.Panel12Label1);
+            this.Panel12.Controls.Add(this.Panel12SpeedTestButton);
+            this.Panel12.Controls.Add(this.Panel12BackButton);
+            this.Panel12.Location = new System.Drawing.Point(0, -1);
+            this.Panel12.Name = "Panel12";
+            this.Panel12.Size = new System.Drawing.Size(801, 453);
+            this.Panel12.TabIndex = 13;
+            // 
+            // Panel12MenuButton
+            // 
+            this.Panel12MenuButton.Location = new System.Drawing.Point(553, 303);
+            this.Panel12MenuButton.Name = "Panel12MenuButton";
+            this.Panel12MenuButton.Size = new System.Drawing.Size(92, 32);
+            this.Panel12MenuButton.TabIndex = 10;
+            this.Panel12MenuButton.Text = "Menu";
+            this.Panel12MenuButton.UseVisualStyleBackColor = true;
+            this.Panel12MenuButton.Click += new System.EventHandler(this.Panel12MenuButton_Click);
+            // 
+            // Panel12MenuLabel
+            // 
+            this.Panel12MenuLabel.AutoSize = true;
+            this.Panel12MenuLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel12MenuLabel.Location = new System.Drawing.Point(521, 263);
+            this.Panel12MenuLabel.Name = "Panel12MenuLabel";
+            this.Panel12MenuLabel.Size = new System.Drawing.Size(156, 32);
+            this.Panel12MenuLabel.TabIndex = 9;
+            this.Panel12MenuLabel.Text = "Lesson Menu";
+            // 
+            // Panel12SpeedTestLabel
+            // 
+            this.Panel12SpeedTestLabel.AutoSize = true;
+            this.Panel12SpeedTestLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel12SpeedTestLabel.Location = new System.Drawing.Point(130, 263);
+            this.Panel12SpeedTestLabel.Name = "Panel12SpeedTestLabel";
+            this.Panel12SpeedTestLabel.Size = new System.Drawing.Size(130, 32);
+            this.Panel12SpeedTestLabel.TabIndex = 8;
+            this.Panel12SpeedTestLabel.Text = "Speed Test";
+            // 
+            // Panel12Label2
+            // 
+            this.Panel12Label2.AutoSize = true;
+            this.Panel12Label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel12Label2.Location = new System.Drawing.Point(142, 127);
+            this.Panel12Label2.Name = "Panel12Label2";
+            this.Panel12Label2.Size = new System.Drawing.Size(503, 64);
+            this.Panel12Label2.TabIndex = 7;
+            this.Panel12Label2.Text = "Now, you can have a test on these characters \r\nor you can go back to the lesson m" +
+    "enu.";
+            this.Panel12Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Panel12Label1
+            // 
+            this.Panel12Label1.AutoSize = true;
+            this.Panel12Label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel12Label1.Location = new System.Drawing.Point(282, 63);
+            this.Panel12Label1.Name = "Panel12Label1";
+            this.Panel12Label1.Size = new System.Drawing.Size(201, 32);
+            this.Panel12Label1.TabIndex = 6;
+            this.Panel12Label1.Text = "Thats all of them!";
+            // 
+            // Panel12SpeedTestButton
+            // 
+            this.Panel12SpeedTestButton.Location = new System.Drawing.Point(142, 308);
+            this.Panel12SpeedTestButton.Name = "Panel12SpeedTestButton";
+            this.Panel12SpeedTestButton.Size = new System.Drawing.Size(92, 32);
+            this.Panel12SpeedTestButton.TabIndex = 2;
+            this.Panel12SpeedTestButton.Text = "Start";
+            this.Panel12SpeedTestButton.UseVisualStyleBackColor = true;
+            this.Panel12SpeedTestButton.Click += new System.EventHandler(this.Panel12SpeedTestButton_Click);
+            // 
+            // Panel12BackButton
+            // 
+            this.Panel12BackButton.Location = new System.Drawing.Point(12, 406);
+            this.Panel12BackButton.Name = "Panel12BackButton";
+            this.Panel12BackButton.Size = new System.Drawing.Size(92, 32);
+            this.Panel12BackButton.TabIndex = 1;
+            this.Panel12BackButton.Text = "Back";
+            this.Panel12BackButton.UseVisualStyleBackColor = true;
+            this.Panel12BackButton.Click += new System.EventHandler(this.Panel12BackButton_Click);
             // 
             // Panel11Label3
             // 
@@ -815,92 +901,6 @@ namespace Form_Ver
             this.Panel1BackButton.Text = "Back";
             this.Panel1BackButton.UseVisualStyleBackColor = true;
             this.Panel1BackButton.Click += new System.EventHandler(this.Panel1BackButton_Click);
-            // 
-            // Panel12
-            // 
-            this.Panel12.Controls.Add(this.Panel12MenuButton);
-            this.Panel12.Controls.Add(this.Panel12MenuLabel);
-            this.Panel12.Controls.Add(this.Panel12SpeedTestLabel);
-            this.Panel12.Controls.Add(this.Panel12Label2);
-            this.Panel12.Controls.Add(this.Panel12Label1);
-            this.Panel12.Controls.Add(this.Panel12SpeedTestButton);
-            this.Panel12.Controls.Add(this.Panel12BackButton);
-            this.Panel12.Location = new System.Drawing.Point(0, -1);
-            this.Panel12.Name = "Panel12";
-            this.Panel12.Size = new System.Drawing.Size(801, 453);
-            this.Panel12.TabIndex = 13;
-            // 
-            // Panel12MenuButton
-            // 
-            this.Panel12MenuButton.Location = new System.Drawing.Point(553, 303);
-            this.Panel12MenuButton.Name = "Panel12MenuButton";
-            this.Panel12MenuButton.Size = new System.Drawing.Size(92, 32);
-            this.Panel12MenuButton.TabIndex = 10;
-            this.Panel12MenuButton.Text = "Menu";
-            this.Panel12MenuButton.UseVisualStyleBackColor = true;
-            this.Panel12MenuButton.Click += new System.EventHandler(this.Panel12MenuButton_Click);
-            // 
-            // Panel12MenuLabel
-            // 
-            this.Panel12MenuLabel.AutoSize = true;
-            this.Panel12MenuLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel12MenuLabel.Location = new System.Drawing.Point(521, 263);
-            this.Panel12MenuLabel.Name = "Panel12MenuLabel";
-            this.Panel12MenuLabel.Size = new System.Drawing.Size(156, 32);
-            this.Panel12MenuLabel.TabIndex = 9;
-            this.Panel12MenuLabel.Text = "Lesson Menu";
-            // 
-            // Panel12SpeedTestLabel
-            // 
-            this.Panel12SpeedTestLabel.AutoSize = true;
-            this.Panel12SpeedTestLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel12SpeedTestLabel.Location = new System.Drawing.Point(130, 263);
-            this.Panel12SpeedTestLabel.Name = "Panel12SpeedTestLabel";
-            this.Panel12SpeedTestLabel.Size = new System.Drawing.Size(130, 32);
-            this.Panel12SpeedTestLabel.TabIndex = 8;
-            this.Panel12SpeedTestLabel.Text = "Speed Test";
-            // 
-            // Panel12Label2
-            // 
-            this.Panel12Label2.AutoSize = true;
-            this.Panel12Label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel12Label2.Location = new System.Drawing.Point(142, 127);
-            this.Panel12Label2.Name = "Panel12Label2";
-            this.Panel12Label2.Size = new System.Drawing.Size(503, 64);
-            this.Panel12Label2.TabIndex = 7;
-            this.Panel12Label2.Text = "Now, you can have a test on these characters \r\nor you can go back to the lesson m" +
-    "enu.";
-            this.Panel12Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Panel12Label1
-            // 
-            this.Panel12Label1.AutoSize = true;
-            this.Panel12Label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel12Label1.Location = new System.Drawing.Point(282, 63);
-            this.Panel12Label1.Name = "Panel12Label1";
-            this.Panel12Label1.Size = new System.Drawing.Size(201, 32);
-            this.Panel12Label1.TabIndex = 6;
-            this.Panel12Label1.Text = "Thats all of them!";
-            // 
-            // Panel12SpeedTestButton
-            // 
-            this.Panel12SpeedTestButton.Location = new System.Drawing.Point(142, 308);
-            this.Panel12SpeedTestButton.Name = "Panel12SpeedTestButton";
-            this.Panel12SpeedTestButton.Size = new System.Drawing.Size(92, 32);
-            this.Panel12SpeedTestButton.TabIndex = 2;
-            this.Panel12SpeedTestButton.Text = "Start";
-            this.Panel12SpeedTestButton.UseVisualStyleBackColor = true;
-            this.Panel12SpeedTestButton.Click += new System.EventHandler(this.Panel12SpeedTestButton_Click);
-            // 
-            // Panel12BackButton
-            // 
-            this.Panel12BackButton.Location = new System.Drawing.Point(12, 406);
-            this.Panel12BackButton.Name = "Panel12BackButton";
-            this.Panel12BackButton.Size = new System.Drawing.Size(92, 32);
-            this.Panel12BackButton.TabIndex = 1;
-            this.Panel12BackButton.Text = "Back";
-            this.Panel12BackButton.UseVisualStyleBackColor = true;
-            this.Panel12BackButton.Click += new System.EventHandler(this.Panel12BackButton_Click);
             // 
             // HiraganaLesson2
             // 

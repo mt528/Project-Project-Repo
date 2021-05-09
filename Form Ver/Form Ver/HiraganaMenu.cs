@@ -104,7 +104,9 @@ namespace Form_Ver
 
         private void Lesson3Button_Click(object sender, EventArgs e)
         {
-
+            HiraganaLesson3 Lesson3 = new HiraganaLesson3(); // Initalising the new form 
+            this.Hide(); // Hide the current form
+            Lesson3.Show(); // Show the new form
         }
         #endregion
 

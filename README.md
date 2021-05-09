@@ -34,3 +34,4 @@ Started adding kristiyans code to the project. - 05/05/2021 - Matt 05/05/2021
 Finished the implamentation - Its not perfect but its functionality is mostly there. - Matt 07/05/2021
 
 Finished the Hiragana Lesson 2 and fixed an issue the weak area method was causing with lesson tests. - 09/05/2021
+Finished the Hiragana Lesson 3.

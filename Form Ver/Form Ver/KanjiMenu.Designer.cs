@@ -86,7 +86,7 @@ namespace Form_Ver
             this.KanjiMenuLesson2Button.Name = "KanjiMenuLesson2Button";
             this.KanjiMenuLesson2Button.Size = new System.Drawing.Size(93, 32);
             this.KanjiMenuLesson2Button.TabIndex = 3;
-            this.KanjiMenuLesson2Button.Text = "Start";
+            this.KanjiMenuLesson2Button.Text = "Not Finished";
             this.KanjiMenuLesson2Button.UseVisualStyleBackColor = true;
             this.KanjiMenuLesson2Button.Click += new System.EventHandler(this.KanjiMenuLesson2Button_Click);
             // 

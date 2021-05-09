@@ -202,7 +202,7 @@ namespace Form_Ver
             this.Lesson3Button.Name = "Lesson3Button";
             this.Lesson3Button.Size = new System.Drawing.Size(115, 28);
             this.Lesson3Button.TabIndex = 14;
-            this.Lesson3Button.Text = "Not Finished";
+            this.Lesson3Button.Text = "Start";
             this.Lesson3Button.UseVisualStyleBackColor = true;
             this.Lesson3Button.Click += new System.EventHandler(this.Lesson3Button_Click);
             // 

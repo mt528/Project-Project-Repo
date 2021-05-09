@@ -215,6 +215,7 @@ namespace Form_Ver
             this.Panel5.Controls.Add(this.Panel5Label1);
             this.Panel5.Controls.Add(this.Panel5TestButton);
             this.Panel5.Controls.Add(this.Panel5BackButton);
+            this.Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel5.Location = new System.Drawing.Point(0, 0);
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(801, 453);
