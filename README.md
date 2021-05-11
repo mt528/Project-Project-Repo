@@ -41,3 +41,4 @@ This works better than hand making them - This works as the lesson format is the
 Added Lesson 5 - This required a lot of debugging through the desinger to work but works now. - Matt 11/05/2021
 
 Finished Hiragana Lesson 6 - same problems occured as last time. Was faster at fixing them though. Cleaning of text needs to happen - Matt 11/05/2021
+Cleaned text. - Matt 11/05/2021
