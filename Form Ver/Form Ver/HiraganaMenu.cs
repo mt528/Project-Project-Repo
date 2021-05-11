@@ -110,7 +110,7 @@ namespace Form_Ver
         }
         #endregion
 
-        #region Lesson 4
+        #region Lesson 4 
         private void Lesson4Label_Click(object sender, EventArgs e)
         {
 
@@ -118,11 +118,13 @@ namespace Form_Ver
 
         private void Lesson4Button_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            HiraganaLesson4 NewLesson = new HiraganaLesson4();
+            NewLesson.Show();
         }
         #endregion
 
-        #region Lesson 5
+        #region Lesson 5 FINISH
         private void Lesson5Label_Click(object sender, EventArgs e)
         {
 
@@ -134,7 +136,7 @@ namespace Form_Ver
         }
         #endregion
 
-        #region Lesson 6
+        #region Lesson 6 FINISH
         private void Lesson6Label_Click(object sender, EventArgs e)
         {
 
@@ -146,7 +148,7 @@ namespace Form_Ver
         }
         #endregion
 
-        #region Lesson 7
+        #region Lesson 7 FINISH
         private void Lesson7Label_Click(object sender, EventArgs e)
         {
 
@@ -158,7 +160,7 @@ namespace Form_Ver
         }
         #endregion
 
-        #region Lesson 8
+        #region Lesson 8 FINISH
         private void Lesson8Label_Click(object sender, EventArgs e)
         {
 

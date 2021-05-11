@@ -35,3 +35,6 @@ Finished the implamentation - Its not perfect but its functionality is mostly th
 
 Finished the Hiragana Lesson 2 and fixed an issue the weak area method was causing with lesson tests. - 09/05/2021
 Finished the Hiragana Lesson 3.
+
+Finished Hiragana lesson 4. This method was by copying the format of the last lesson and changing the code and the designer code to match the correct content.
+This works better than hand making them - This works as the lesson format is the same anyway. - 11/05/2021
