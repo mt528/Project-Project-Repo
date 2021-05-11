@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="HiraganaLesson5.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="HiraganaLesson4.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -132,7 +132,9 @@ namespace Form_Ver
 
         private void Lesson5Button_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            HiraganaLesson5 Lesson = new HiraganaLesson5();
+            Lesson.Show();
         }
         #endregion
 

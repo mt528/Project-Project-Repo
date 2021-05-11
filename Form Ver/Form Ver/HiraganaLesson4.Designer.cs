@@ -202,7 +202,7 @@ namespace Form_Ver
             this.Panel1Label2.Name = "Panel1Label2";
             this.Panel1Label2.Size = new System.Drawing.Size(194, 96);
             this.Panel1Label2.TabIndex = 7;
-            this.Panel1Label2.Text = "Lesson Contents:\r\nは,ひ,ふ,へ,ほ\r\n,ま,み,む,め,も"; // Updated for lesson 4 content
+            this.Panel1Label2.Text = "Lesson Contents:\r\nは,ひ,ふ,へ,ほ\r\nま,み,む,め,も"; // Updated for lesson 4 content
             this.Panel1Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Panel1Label1
