@@ -167,7 +167,7 @@ namespace Form_Ver
         }
         #endregion
 
-        #region Lesson 8 FINISH
+        #region Lesson 8 
         private void Lesson8Label_Click(object sender, EventArgs e)
         {
 
@@ -175,7 +175,9 @@ namespace Form_Ver
 
         private void Lesson8Button_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            HiraganaLesson8 NewForm = new HiraganaLesson8();
+            NewForm.Show();
         }
         #endregion
 
