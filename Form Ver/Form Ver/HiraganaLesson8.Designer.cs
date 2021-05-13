@@ -1169,7 +1169,7 @@ namespace Form_Ver
             // 
             this.Panel4Label1.AutoSize = true;
             this.Panel4Label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel4Label1.Location = new System.Drawing.Point(252, 75);
+            this.Panel4Label1.Location = new System.Drawing.Point(170, 75);
             this.Panel4Label1.Name = "Panel4Label1";
             this.Panel4Label1.Size = new System.Drawing.Size(435, 32);
             this.Panel4Label1.TabIndex = 6;
