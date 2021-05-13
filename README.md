@@ -42,3 +42,5 @@ Added Lesson 5 - This required a lot of debugging through the desinger to work b
 
 Finished Hiragana Lesson 6 - same problems occured as last time. Was faster at fixing them though. Cleaning of text needs to happen - Matt 11/05/2021
 Cleaned text. - Matt 11/05/2021
+
+Finished Hiragan lesson 7 and 8. Cleaned the text within them. Testing appear to be fine. Fixed a few spelling errors. - Matt 13/05/2021 
