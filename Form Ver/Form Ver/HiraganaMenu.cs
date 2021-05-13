@@ -58,6 +58,7 @@ namespace Form_Ver
 
 
         #region Lesson and Test Components
+
         #region Lesson 1 
         private void Lesson1Label_Click(object sender, EventArgs e) // Lesson 1 label
         {
@@ -152,7 +153,7 @@ namespace Form_Ver
         }
         #endregion
 
-        #region Lesson 7 FINISH
+        #region Lesson 7 
         private void Lesson7Label_Click(object sender, EventArgs e)
         {
 
@@ -160,7 +161,9 @@ namespace Form_Ver
 
         private void Lesson7Button_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            HiraganaLesson7 MyForm = new HiraganaLesson7();
+            MyForm.Show();
         }
         #endregion
 
