@@ -1169,11 +1169,11 @@ namespace Form_Ver
             // 
             this.Panel4Label1.AutoSize = true;
             this.Panel4Label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel4Label1.Location = new System.Drawing.Point(170, 75);
+            this.Panel4Label1.Location = new System.Drawing.Point(210, 75);
             this.Panel4Label1.Name = "Panel4Label1";
-            this.Panel4Label1.Size = new System.Drawing.Size(435, 32);
+            this.Panel4Label1.Size = new System.Drawing.Size(352, 32);
             this.Panel4Label1.TabIndex = 6;
-            this.Panel4Label1.Text = "The second second example will be しゅ";
+            this.Panel4Label1.Text = "The second example will be しゅ";
             // 
             // Panel4NextButton
             // 
@@ -1220,11 +1220,11 @@ namespace Form_Ver
             // 
             this.Panel3Label1.AutoSize = true;
             this.Panel3Label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel3Label1.Location = new System.Drawing.Point(252, 75);
+            this.Panel3Label1.Location = new System.Drawing.Point(220, 75);
             this.Panel3Label1.Name = "Panel3Label1";
-            this.Panel3Label1.Size = new System.Drawing.Size(270, 32);
+            this.Panel3Label1.Size = new System.Drawing.Size(317, 32);
             this.Panel3Label1.TabIndex = 6;
-            this.Panel3Label1.Text = "The example will be きゃ";
+            this.Panel3Label1.Text = "The first example will be きゃ";
             // 
             // Panel3NextButton
             // 
