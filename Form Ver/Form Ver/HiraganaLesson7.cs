@@ -55,7 +55,7 @@ namespace Form_Ver
         #endregion 
 
         // REMEBER TO UPDATE IS COPIED FORMAT // REMEBER TO UPDATE IS COPIED FORMAT
-        #region G's Panel's 2 - 6
+        #region B's Panel's 2 - 6
 
         #region Panel 2 - ば
         // Next Button
@@ -140,7 +140,7 @@ namespace Form_Ver
         #endregion
 
         // REMEBER TO UPDATE IS COPIED FORMAT // REMEBER TO UPDATE IS COPIED FORMAT
-        #region Z's Panel's 7 - 11
+        #region P's Panel's 7 - 11
 
         #region Panel 7 - ぱ
         // Next Button
@@ -203,6 +203,7 @@ namespace Form_Ver
         // Next Button
         private void Panel11NextButton_Click(object sender, EventArgs e)
         {
+
             Panel18.Show(); // Changed from 11 to 18 to skip not used panels
         }
 
