@@ -42,6 +42,14 @@ namespace Form_Ver
             this.Panel11 = new System.Windows.Forms.Panel();
             this.Panel12 = new System.Windows.Forms.Panel();
             this.Panel13 = new System.Windows.Forms.Panel();
+            this.Panel18 = new System.Windows.Forms.Panel();
+            this.Panel18MenuButton = new System.Windows.Forms.Button();
+            this.Panel18MenuLabel = new System.Windows.Forms.Label();
+            this.Panel18SpeedTestLabel = new System.Windows.Forms.Label();
+            this.Panel18Label2 = new System.Windows.Forms.Label();
+            this.Panel18Label1 = new System.Windows.Forms.Label();
+            this.Panel18SpeedTestButton = new System.Windows.Forms.Button();
+            this.Panel18BackButton = new System.Windows.Forms.Button();
             this.Panel14 = new System.Windows.Forms.Panel();
             this.Panel15 = new System.Windows.Forms.Panel();
             this.Panel16 = new System.Windows.Forms.Panel();
@@ -130,14 +138,6 @@ namespace Form_Ver
             this.Panel1Label1 = new System.Windows.Forms.Label();
             this.Panel1NextButton = new System.Windows.Forms.Button();
             this.Panel1BackButton = new System.Windows.Forms.Button();
-            this.Panel18 = new System.Windows.Forms.Panel();
-            this.Panel18MenuButton = new System.Windows.Forms.Button();
-            this.Panel18MenuLabel = new System.Windows.Forms.Label();
-            this.Panel18SpeedTestLabel = new System.Windows.Forms.Label();
-            this.Panel18Label2 = new System.Windows.Forms.Label();
-            this.Panel18Label1 = new System.Windows.Forms.Label();
-            this.Panel18SpeedTestButton = new System.Windows.Forms.Button();
-            this.Panel18BackButton = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
@@ -151,11 +151,11 @@ namespace Form_Ver
             this.Panel11.SuspendLayout();
             this.Panel12.SuspendLayout();
             this.Panel13.SuspendLayout();
+            this.Panel18.SuspendLayout();
             this.Panel14.SuspendLayout();
             this.Panel15.SuspendLayout();
             this.Panel16.SuspendLayout();
             this.Panel17.SuspendLayout();
-            this.Panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel1
@@ -338,6 +338,93 @@ namespace Form_Ver
             this.Panel13.Name = "Panel13";
             this.Panel13.Size = new System.Drawing.Size(801, 453);
             this.Panel13.TabIndex = 17;
+            // 
+            // Panel18
+            // 
+            this.Panel18.Controls.Add(this.Panel18MenuButton);
+            this.Panel18.Controls.Add(this.Panel18MenuLabel);
+            this.Panel18.Controls.Add(this.Panel18SpeedTestLabel);
+            this.Panel18.Controls.Add(this.Panel18Label2);
+            this.Panel18.Controls.Add(this.Panel18Label1);
+            this.Panel18.Controls.Add(this.Panel18SpeedTestButton);
+            this.Panel18.Controls.Add(this.Panel18BackButton);
+            this.Panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel18.Location = new System.Drawing.Point(0, 0);
+            this.Panel18.Name = "Panel18";
+            this.Panel18.Size = new System.Drawing.Size(801, 453);
+            this.Panel18.TabIndex = 17;
+            // 
+            // Panel18MenuButton
+            // 
+            this.Panel18MenuButton.Location = new System.Drawing.Point(553, 303);
+            this.Panel18MenuButton.Name = "Panel18MenuButton";
+            this.Panel18MenuButton.Size = new System.Drawing.Size(92, 32);
+            this.Panel18MenuButton.TabIndex = 10;
+            this.Panel18MenuButton.Text = "Menu";
+            this.Panel18MenuButton.UseVisualStyleBackColor = true;
+            this.Panel18MenuButton.Click += new System.EventHandler(this.Panel18MenuButton_Click);
+            // 
+            // Panel18MenuLabel
+            // 
+            this.Panel18MenuLabel.AutoSize = true;
+            this.Panel18MenuLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel18MenuLabel.Location = new System.Drawing.Point(521, 263);
+            this.Panel18MenuLabel.Name = "Panel18MenuLabel";
+            this.Panel18MenuLabel.Size = new System.Drawing.Size(156, 32);
+            this.Panel18MenuLabel.TabIndex = 9;
+            this.Panel18MenuLabel.Text = "Lesson Menu";
+            // 
+            // Panel18SpeedTestLabel
+            // 
+            this.Panel18SpeedTestLabel.AutoSize = true;
+            this.Panel18SpeedTestLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel18SpeedTestLabel.Location = new System.Drawing.Point(130, 263);
+            this.Panel18SpeedTestLabel.Name = "Panel18SpeedTestLabel";
+            this.Panel18SpeedTestLabel.Size = new System.Drawing.Size(130, 32);
+            this.Panel18SpeedTestLabel.TabIndex = 8;
+            this.Panel18SpeedTestLabel.Text = "Speed Test";
+            // 
+            // Panel18Label2
+            // 
+            this.Panel18Label2.AutoSize = true;
+            this.Panel18Label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel18Label2.Location = new System.Drawing.Point(142, 127);
+            this.Panel18Label2.Name = "Panel18Label2";
+            this.Panel18Label2.Size = new System.Drawing.Size(503, 64);
+            this.Panel18Label2.TabIndex = 7;
+            this.Panel18Label2.Text = "Now, you can have a test on these characters \r\nor you can go back to the lesson m" +
+    "enu.";
+            this.Panel18Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Panel18Label1
+            // 
+            this.Panel18Label1.AutoSize = true;
+            this.Panel18Label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Panel18Label1.Location = new System.Drawing.Point(282, 63);
+            this.Panel18Label1.Name = "Panel18Label1";
+            this.Panel18Label1.Size = new System.Drawing.Size(201, 32);
+            this.Panel18Label1.TabIndex = 6;
+            this.Panel18Label1.Text = "Thats all of them!";
+            // 
+            // Panel18SpeedTestButton
+            // 
+            this.Panel18SpeedTestButton.Location = new System.Drawing.Point(142, 308);
+            this.Panel18SpeedTestButton.Name = "Panel18SpeedTestButton";
+            this.Panel18SpeedTestButton.Size = new System.Drawing.Size(92, 32);
+            this.Panel18SpeedTestButton.TabIndex = 2;
+            this.Panel18SpeedTestButton.Text = "Start";
+            this.Panel18SpeedTestButton.UseVisualStyleBackColor = true;
+            this.Panel18SpeedTestButton.Click += new System.EventHandler(this.Panel18SpeedTestButton_Click);
+            // 
+            // Panel18BackButton
+            // 
+            this.Panel18BackButton.Location = new System.Drawing.Point(12, 406);
+            this.Panel18BackButton.Name = "Panel18BackButton";
+            this.Panel18BackButton.Size = new System.Drawing.Size(92, 32);
+            this.Panel18BackButton.TabIndex = 1;
+            this.Panel18BackButton.Text = "Back";
+            this.Panel18BackButton.UseVisualStyleBackColor = true;
+            this.Panel18BackButton.Click += new System.EventHandler(this.Panel18BackButton_Click);
             // 
             // Panel14
             // 
@@ -1213,7 +1300,7 @@ namespace Form_Ver
             // 
             this.Panel1Label2.AutoSize = true;
             this.Panel1Label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel1Label2.Location = new System.Drawing.Point(294, 126);
+            this.Panel1Label2.Location = new System.Drawing.Point(260, 180);
             this.Panel1Label2.Name = "Panel1Label2";
             this.Panel1Label2.Size = new System.Drawing.Size(263, 96);
             this.Panel1Label2.TabIndex = 7;
@@ -1224,11 +1311,11 @@ namespace Form_Ver
             // 
             this.Panel1Label1.AutoSize = true;
             this.Panel1Label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel1Label1.Location = new System.Drawing.Point(168, 59);
+            this.Panel1Label1.Location = new System.Drawing.Point(200, 59);
             this.Panel1Label1.Name = "Panel1Label1";
-            this.Panel1Label1.Size = new System.Drawing.Size(726, 32);
+            this.Panel1Label1.Size = new System.Drawing.Size(373, 64);
             this.Panel1Label1.TabIndex = 6;
-            this.Panel1Label1.Text = "This lesson will cover how to read\r\n and make smaller hybrid sounds\r\n";
+            this.Panel1Label1.Text = "This lesson will cover how to read\r\nand make smaller hybrid sounds\r\n";
             // 
             // Panel1NextButton
             // 
@@ -1249,93 +1336,6 @@ namespace Form_Ver
             this.Panel1BackButton.Text = "Back";
             this.Panel1BackButton.UseVisualStyleBackColor = true;
             this.Panel1BackButton.Click += new System.EventHandler(this.Panel1BackButton_Click);
-            // 
-            // Panel18
-            // 
-            this.Panel18.Controls.Add(this.Panel18MenuButton);
-            this.Panel18.Controls.Add(this.Panel18MenuLabel);
-            this.Panel18.Controls.Add(this.Panel18SpeedTestLabel);
-            this.Panel18.Controls.Add(this.Panel18Label2);
-            this.Panel18.Controls.Add(this.Panel18Label1);
-            this.Panel18.Controls.Add(this.Panel18SpeedTestButton);
-            this.Panel18.Controls.Add(this.Panel18BackButton);
-            this.Panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel18.Location = new System.Drawing.Point(0, 0);
-            this.Panel18.Name = "Panel18";
-            this.Panel18.Size = new System.Drawing.Size(801, 453);
-            this.Panel18.TabIndex = 17;
-            // 
-            // Panel18MenuButton
-            // 
-            this.Panel18MenuButton.Location = new System.Drawing.Point(553, 303);
-            this.Panel18MenuButton.Name = "Panel18MenuButton";
-            this.Panel18MenuButton.Size = new System.Drawing.Size(92, 32);
-            this.Panel18MenuButton.TabIndex = 10;
-            this.Panel18MenuButton.Text = "Menu";
-            this.Panel18MenuButton.UseVisualStyleBackColor = true;
-            this.Panel18MenuButton.Click += new System.EventHandler(this.Panel18MenuButton_Click);
-            // 
-            // Panel18MenuLabel
-            // 
-            this.Panel18MenuLabel.AutoSize = true;
-            this.Panel18MenuLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel18MenuLabel.Location = new System.Drawing.Point(521, 263);
-            this.Panel18MenuLabel.Name = "Panel18MenuLabel";
-            this.Panel18MenuLabel.Size = new System.Drawing.Size(156, 32);
-            this.Panel18MenuLabel.TabIndex = 9;
-            this.Panel18MenuLabel.Text = "Lesson Menu";
-            // 
-            // Panel18SpeedTestLabel
-            // 
-            this.Panel18SpeedTestLabel.AutoSize = true;
-            this.Panel18SpeedTestLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel18SpeedTestLabel.Location = new System.Drawing.Point(130, 263);
-            this.Panel18SpeedTestLabel.Name = "Panel18SpeedTestLabel";
-            this.Panel18SpeedTestLabel.Size = new System.Drawing.Size(130, 32);
-            this.Panel18SpeedTestLabel.TabIndex = 8;
-            this.Panel18SpeedTestLabel.Text = "Speed Test";
-            // 
-            // Panel18Label2
-            // 
-            this.Panel18Label2.AutoSize = true;
-            this.Panel18Label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel18Label2.Location = new System.Drawing.Point(142, 127);
-            this.Panel18Label2.Name = "Panel18Label2";
-            this.Panel18Label2.Size = new System.Drawing.Size(503, 64);
-            this.Panel18Label2.TabIndex = 7;
-            this.Panel18Label2.Text = "Now, you can have a test on these characters \r\nor you can go back to the lesson m" +
-    "enu.";
-            this.Panel18Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Panel18Label1
-            // 
-            this.Panel18Label1.AutoSize = true;
-            this.Panel18Label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel18Label1.Location = new System.Drawing.Point(282, 63);
-            this.Panel18Label1.Name = "Panel18Label1";
-            this.Panel18Label1.Size = new System.Drawing.Size(201, 32);
-            this.Panel18Label1.TabIndex = 6;
-            this.Panel18Label1.Text = "Thats all of them!";
-            // 
-            // Panel18SpeedTestButton
-            // 
-            this.Panel18SpeedTestButton.Location = new System.Drawing.Point(142, 308);
-            this.Panel18SpeedTestButton.Name = "Panel18SpeedTestButton";
-            this.Panel18SpeedTestButton.Size = new System.Drawing.Size(92, 32);
-            this.Panel18SpeedTestButton.TabIndex = 2;
-            this.Panel18SpeedTestButton.Text = "Start";
-            this.Panel18SpeedTestButton.UseVisualStyleBackColor = true;
-            this.Panel18SpeedTestButton.Click += new System.EventHandler(this.Panel18SpeedTestButton_Click);
-            // 
-            // Panel18BackButton
-            // 
-            this.Panel18BackButton.Location = new System.Drawing.Point(12, 406);
-            this.Panel18BackButton.Name = "Panel18BackButton";
-            this.Panel18BackButton.Size = new System.Drawing.Size(92, 32);
-            this.Panel18BackButton.TabIndex = 1;
-            this.Panel18BackButton.Text = "Back";
-            this.Panel18BackButton.UseVisualStyleBackColor = true;
-            this.Panel18BackButton.Click += new System.EventHandler(this.Panel18BackButton_Click);
             // 
             // HiraganaLesson8
             // 
@@ -1372,6 +1372,8 @@ namespace Form_Ver
             this.Panel12.PerformLayout();
             this.Panel13.ResumeLayout(false);
             this.Panel13.PerformLayout();
+            this.Panel18.ResumeLayout(false);
+            this.Panel18.PerformLayout();
             this.Panel14.ResumeLayout(false);
             this.Panel14.PerformLayout();
             this.Panel15.ResumeLayout(false);
@@ -1380,8 +1382,6 @@ namespace Form_Ver
             this.Panel16.PerformLayout();
             this.Panel17.ResumeLayout(false);
             this.Panel17.PerformLayout();
-            this.Panel18.ResumeLayout(false);
-            this.Panel18.PerformLayout();
             this.ResumeLayout(false);
 
         }
