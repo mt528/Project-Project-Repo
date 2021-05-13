@@ -1259,22 +1259,23 @@ namespace Form_Ver
             // 
             this.Panel2Label2.AutoSize = true;
             this.Panel2Label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Panel2Label2.Location = new System.Drawing.Point(273, 148);
+            this.Panel2Label2.Location = new System.Drawing.Point(320, 200);
             this.Panel2Label2.Name = "Panel2Label2";
-            this.Panel2Label2.Size = new System.Drawing.Size(244, 128);
+            this.Panel2Label2.Size = new System.Drawing.Size(128, 96);
             this.Panel2Label2.TabIndex = 7;
-            this.Panel2Label2.Text = "They change K into G\r\nS into Z\r\nT into D and\r\nH into B sounds";
+            this.Panel2Label2.Text = "Example:\r\nじゃ = jya\r\nみょ = myo";
             this.Panel2Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(271, 75);
+            this.label3.Location = new System.Drawing.Point(140, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(507, 64);
             this.label3.TabIndex = 6;
             this.label3.Text = "These sounds are using two Hiragana to make\r\na hybrid noise";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Panel2NextButton
             // 
