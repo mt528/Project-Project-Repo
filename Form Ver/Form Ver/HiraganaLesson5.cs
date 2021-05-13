@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Form_Ver
@@ -90,7 +85,7 @@ namespace Form_Ver
         {
             //Panel5.BringToFront();
             Panel5.Show();
-            
+
         }
 
         // Back Button
@@ -273,12 +268,12 @@ namespace Form_Ver
 
         #endregion
 
-        
+
     }
 }
-    
 
-    
+
+
 
 
 
